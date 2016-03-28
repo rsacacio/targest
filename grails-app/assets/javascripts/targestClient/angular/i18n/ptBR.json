@@ -7,7 +7,8 @@
     "TICKET_TYPES": "Tipos de promoções",
     "CAMPAIGNS": "Campanhas",
     "TICKETS": "Cupons",
-    "TICKET_USE": "Consumo",
+    "TICKET_USE": "Usar cupom",
+    "TYPE_TICKET_CODE": "Digite o cupom",
     "ENTER_FULLSCREEN": "Fullscreen",
     "EXIT_FULLSCREEN": "Normal",
     "EXIT": "Sair",
@@ -179,5 +180,24 @@
       "TICKET_TYPE": "Tipo de promoção",
       "SAVE": "Salvar"
     }
+  },
+  "TICKET":{
+    "TITLE": "Cupons",
+    "DETAIL": {
+      "TITLE": "Detalhes",
+      "AMOUNT": "Total consumido com o cupom",
+      "USE_TICKET": "Usar cupom"
+    },
+    "HISTORY":{
+      "TITLE": "Histórico"
+    },
+    "LIST": {
+      "CAMPAIGN": "Campanha",
+      "CREATION": "Data de criação",
+      "STATUS": "Status",
+      "AMOUNT": "Total consumido",
+      "VIEW": "Visualizar"
+    }
+
   }
 }

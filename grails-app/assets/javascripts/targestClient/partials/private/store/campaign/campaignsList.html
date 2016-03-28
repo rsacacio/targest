@@ -27,7 +27,7 @@
                 </div>
             </div>
         </div>
-        <div class="table-responsive" ng-if="(CategoriesListCtrl.campaigns | filter: CampaignListCtrl.search).length > 0">
+        <div class="table-responsive" ng-if="(CampaignsListCtrl.campaigns | filter: CampaignListCtrl.search).length > 0">
             <table class="table table-striped">
                 <thead>
                 <tr>
@@ -40,18 +40,18 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr ng-repeat="category in CampaignListCtrl.campaigns | filter: CampaignListCtrl.search">
+                <tr ng-repeat="campaign in CampaignListCtrl.campaigns | filter: CampaignListCtrl.search">
                     <td>
-                        <span keywords="CampaignListCtrl.search" highlight="category.name"></span>
+                        <span keywords="CampaignListCtrl.search" highlight="campaign.name"></span>
                     </td>
                     <td>
-                        <span keywords="CampaignListCtrl.search" highlight="category.description"></span>
+                        <span keywords="CampaignListCtrl.search" highlight="campaign.description"></span>
                     </td>
                     <td>
                         <a href="#"><i class="fa fa-check text-navy"></i></a>
                     </td>
                     <td>
-                        <a style="cursor: pointer" ng-click="CategoriesListCtrl.remove(category)">
+                        <a style="cursor: pointer" ng-click="CampaignsListCtrl.remove(campaign)">
                             <i class="fa fa-times"></i>
                         </a>
                     </td>

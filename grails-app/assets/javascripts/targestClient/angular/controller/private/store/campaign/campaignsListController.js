@@ -1,11 +1,11 @@
 (function () {
     'use strict';
 
-    angular.module('targestApp').controller('CampaignListController', CampaignListController);
+    angular.module('targestApp').controller('CampaignsListController', CampaignsListController);
 
-    CampaignListController.$inject = ['CampaignListService', '$filter', 'SweetAlert'];
+    CampaignsListController.$inject = ['CampaignListService', '$filter', 'SweetAlert'];
 
-    function CampaignListController(CampaignListService, $filter, SweetAlert) {
+    function CampaignsListController(CampaignListService, $filter, SweetAlert) {
         var self = this;
         self.remove = remove;
 

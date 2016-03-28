@@ -1,11 +1,11 @@
 (function () {
     'use strict';
 
-    angular.module('targestApp').controller('CampaignController', CampaignController);
+    angular.module('targestApp').controller('CampaignsController', CampaignsController);
 
-    CampaignController.$inject = ['$location'];
+    CampaignsController.$inject = ['$location'];
 
-    function CampaignController($location) {
+    function CampaignsController($location) {
         var self = this;
         self.isActive = isActive;
 

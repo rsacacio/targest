@@ -1,0 +1,35 @@
+<div class="page-header">
+    <h1>{{ 'CONFIG.TITLE' | translate }}</h1>
+</div>
+<div class="tabs-container">
+    <div class="row">
+        <div class="col-md-2">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="nav nav-pills nav-stacked nav-pills-stacked-example">
+                        <li role="presentation" ng-class="ConfigCtrl.isActive('profile')">
+                            <a ui-sref="company.config.profile">{{ 'CONFIG.MENU.PROFILE' | translate }}</a>
+                        </li>
+                        <li ng-class="ConfigCtrl.isActive('add')">
+                            <a ui-sref="company.config.preferences">
+                                {{ 'CONFIG.MENU.PREFERENCES' | translate }}
+                            </a>
+                        </li>
+                        <li ng-class="ConfigCtrl.isActive('add')">
+                            <a ui-sref="company.config.preferences">
+                                {{ 'CONFIG.MENU.USERS' | translate }}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-10">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox float-e-margins" ui-view="viewConfig"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

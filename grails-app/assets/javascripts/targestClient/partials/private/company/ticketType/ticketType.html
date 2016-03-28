@@ -1,0 +1,31 @@
+<div class="page-header">
+    <h1>{{ 'TICKET_TYPES.TITLE' | translate }}</h1>
+</div>
+<div class="tabs-container animated fadeInRight">
+    <div class="row">
+        <div class="col-md-2">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="nav nav-pills nav-stacked nav-pills-stacked-example">
+                        <li role="presentation" ng-class="TicketTypeCtrl.isActive('list')">
+                            <a ui-sref="company.ticketType.list">{{ 'TICKET_TYPES.MENU.LIST' | translate }}</a>
+                        </li>
+                        <li ng-class="TicketTypeCtrl.isActive('add')">
+                            <a ui-sref="company.ticketType.add">
+                                <i class="fa fa-plus"></i>
+                                {{ 'TICKET_TYPES.MENU.ADD' | translate }}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-10">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox float-e-margins" ui-view="viewTicketType"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,62 @@
+<div class="ibox-title">
+    <h3>{{ 'TICKET_TYPES.LIST.TITLE' | translate }}</h3>
+</div>
+<div class="ibox-content">
+    <div ng-if="TicketTypeListCtrl.ticketTypes.length > 0">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="input-group">
+                    <input type="text" placeholder="{{ 'TICKET_TYPES.LIST.SEARCH' | translate }}"  ng-model="TicketTypeListCtrl.search" class="input-sm form-control">
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-sm btn-primary"> <i class="fa fa-search"></i></button>
+                </span>
+                </div>
+            </div>
+            <div class="col-sm-4 m-b-xs col-sm-offset-4">
+                <div class="pull-right">
+                    <div data-toggle="buttons" class="btn-group">
+                        <label class="btn btn-sm btn-white">
+                            <input type="radio" id="option1" name="options">
+                            {{ 'TICKET_TYPES.LIST.ACTIVE' | translate }}
+                        </label>
+                        <label class="btn btn-sm btn-white active">
+                            <input type="radio" id="option2" name="options">
+                            {{ 'TICKET_TYPES.LIST.INACTIVE' | translate }}
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-responsive" ng-if="(TicketTypeListCtrl.ticketTypes | filter: TicketTypeListCtrl.search).length > 0">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>{{ 'TICKET_TYPES.LIST.NAME' | translate }}</th>
+                    <th>{{ 'TICKET_TYPES.LIST.DESCRIPTION' | translate }}</th>
+                    <th>{{ 'TICKET_TYPES.LIST.STATUS' | translate }}</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="ticketType in TicketTypeListCtrl.ticketTypes | filter: TicketTypeListCtrl.search">
+                    <td>
+                        <span keywords="TicketTypeListCtrl.search" highlight="ticketType.name"></span>
+                    </td>
+                    <td>
+                        <span keywords="TicketTypeListCtrl.search" highlight="ticketType.description"></span>
+                    </td>
+                    <td>
+                        <a href="#"><i class="fa fa-check text-navy"></i></a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="alert alert-warning" ng-if="(TicketTypeListCtrl.ticketTypes | filter: TicketTypeListCtrl.search).length == 0">
+            {{ 'TICKET_TYPES.NO_TICKET_TYPES_FOUND' | translate }}
+        </div>
+    </div>
+    <div class="alert alert-info" ng-if="TicketTypeListCtrl.ticketTypes.length == 0">
+        {{ 'TICKET_TYPES.NO_TICKET_TYPES' | translate }}
+        <a class="alert-link" ui-sref="company.ticketType.add">{{ 'TICKET_TYPES.NO_TICKET_TYPES_LINK' | translate }}</a>
+    </div>
+</div>

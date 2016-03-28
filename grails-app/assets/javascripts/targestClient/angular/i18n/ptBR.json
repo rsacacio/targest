@@ -1,0 +1,183 @@
+{
+  "APPLICATION_NAME": "Targest",
+  "HEADER": {
+    "DASHBOARD": "Dashboard",
+    "STORES": "Lojas",
+    "CATEGORIES": "Categorias",
+    "TICKET_TYPES": "Tipos de promoções",
+    "CAMPAIGNS": "Campanhas",
+    "TICKETS": "Cupons",
+    "TICKET_USE": "Consumo",
+    "ENTER_FULLSCREEN": "Fullscreen",
+    "EXIT_FULLSCREEN": "Normal",
+    "EXIT": "Sair",
+    "CONFIGURATIONS": "Configurações",
+    "CHANGE_PROFILE": "Trocar perfil"
+  },
+  "MESSAGE": {
+    "FIELD_REQUIRED": "Este campo é de preenchimento obrigatório",
+    "FORMAT_INVALID": "Formato inválido",
+    "ARE_YOU_SURE_ITEM": "Você confirma a exclusão do item {{itemName}}?",
+    "DELETION_IS_NOT_RECOVER": "Esta ação não poderá ser desfeita!",
+    "YES_I_SURE": "Sim eu tenho!",
+    "NO_THANKS": "Não, obrigado!",
+    "DELETED": "Removido!",
+    "DELETED_WITH_SUCCESS": "Item excluído com sucesso."
+  },
+  "DASHBOARD": {
+    "TITLE": "Dashboard"
+  },
+  "CHOOSE": {
+    "TITLE": "Escolha como você deseja entrar"
+  },
+  "CATEGORIES": {
+    "TITLE": "Categorias",
+    "NO_CATEGORIES": "Nenhuma categoria cadastrada.",
+    "NO_CATEGORIES_LINK": "Clique aqui para cadastrar.",
+    "NO_CATEGORIES_FOUND": "Nenhuma categoria encontrada para os critérios de busca.",
+    "MENU": {
+      "LIST": "Listar",
+      "ADD": "Adicionar"
+    },
+    "LIST": {
+      "TITLE": "Listar",
+      "INACTIVE": "Inativo",
+      "ACTIVE": "Ativo",
+      "SEARCH": "Procurar",
+      "NAME": "Nome",
+      "DESCRIPTION": "Descrição",
+      "STATUS": "Status"
+    },
+    "EDIT": {
+      "TITLE": "Editar",
+      "NAME": "Nome",
+      "DESCRIPTION": "Descrição",
+      "SAVE": "Salvar",
+      "CANCEL": "Cancelar"
+    },
+    "ADD": {
+      "TITLE": "Adicionar",
+      "NAME": "Nome",
+      "DESCRIPTION": "Descrição",
+      "SAVE": "Salvar"
+    }
+  },
+  "STORES": {
+    "TITLE": "Lojas",
+    "NO_STORES": "Nenhuma loja cadastrada.",
+    "NO_STORES_LINK": "Clique aqui para cadastrar.",
+    "NO_STORES_FOUND": "Nenhuma loja encontrada para os critérios de busca.",
+    "MENU": {
+      "LIST": "Listar",
+      "ADD": "Adicionar"
+    },
+    "LIST": {
+      "TITLE": "Listar",
+      "NAME": "Nome",
+      "DESCRIPTION": "Descrição",
+      "STATUS": "Status",
+      "ACTIVE": "Ativo",
+      "INACTIVE": "Inativo",
+      "SEARCH": "Procurar"
+    },
+    "EDIT": {
+      "TITLE": "Editar"
+    },
+    "ADD": {
+      "TITLE": "Adicionar",
+      "NAME": "Nome",
+      "DESCRIPTION": "Descrição",
+      "SAVE": "Salvar",
+      "USERS": "Usuários",
+      "NO_USERS": "Nenhum usuário adicionado.",
+      "NO_USERS_LINK": "Clique aqui para adicionar.",
+      "USER_LIST": {
+        "NAME": "Nome",
+        "EMAIL": "E-mail",
+        "TYPE": "Tipo de usuário"
+      },
+      "ADD_USER": {
+        "TITLE": "Adiacionar usuário",
+        "NAME": "Nome",
+        "EMAIL": "E-mail",
+        "TYPE": "Tipo de usuário",
+        "SAVE": "Salvar",
+        "CLOSE": "Fechar"
+      }
+    }
+  },
+  "TICKET_TYPES": {
+    "TITLE": "Tipos de promoções",
+    "NO_TICKET_TYPES": "Nenhum tipo de promoção cadastrado.",
+    "NO_TICKET_TYPES_LINK": "Clique aqui para cadastrar.",
+    "NO_TICKET_TYPES_FOUND": "Nenhum tipo de promoção encontrado para os critérios de busca.",
+    "MENU": {
+      "LIST": "Listar",
+      "ADD": "Adicionar"
+    },
+    "LIST": {
+      "TITLE": "Listar",
+      "NAME": "Nome",
+      "DESCRIPTION": "Descrição",
+      "STATUS": "Status",
+      "ACTIVE": "Ativo",
+      "INACTIVE": "Inativo",
+      "SEARCH": "Procurar"
+    },
+    "EDIT": {
+      "TITLE": "Editar"
+    },
+    "ADD": {
+      "TITLE": "Adicionar",
+      "NAME": "Nome",
+      "DESCRIPTION": "Descrição",
+      "SAVE": "Salvar"
+    }
+  },
+  "CONFIG": {
+    "TITLE": "Configurações",
+    "MENU": {
+      "PROFILE": "Perfil",
+      "PREFERENCES": "Preferências",
+      "USERS": "Usuários"
+    },
+    "PROFILE": {
+      "TITLE": "Perfil",
+      "NAME": "Nome",
+      "EMAIL": "E-mail",
+      "SAVE": "Salvar"
+    }
+  },
+  "CAMPAIGN": {
+    "TITLE": "Campanhas",
+    "NO_CAMPAIGN": "Nenhuma campanha cadastrada..",
+    "NO_CAMPAIGN_LINK": "Clique aqui para cadastrar.",
+    "NO_CAMPAIGN_FOUND": "Nenhum campanha encontrada para os critérios de busca.",
+    "MENU": {
+      "LIST": "Listar",
+      "ADD": "Adicionar"
+    },
+    "LIST": {
+      "TITLE": "Listar",
+      "NAME": "Nome",
+      "DESCRIPTION": "Descrição",
+      "STATUS": "Status",
+      "ACTIVE": "Ativo",
+      "INACTIVE": "Inativo",
+      "SEARCH": "Procurar"
+    },
+    "EDIT": {
+      "TITLE": "Editar"
+    },
+    "ADD": {
+      "TITLE": "Adicionar",
+      "NAME": "Nome",
+      "DESCRIPTION": "Descrição",
+      "START": "Início",
+      "END": "Fim",
+      "CATEGORY": "Categorias",
+      "TICKET_TYPE": "Tipo de promoção",
+      "SAVE": "Salvar"
+    }
+  }
+}

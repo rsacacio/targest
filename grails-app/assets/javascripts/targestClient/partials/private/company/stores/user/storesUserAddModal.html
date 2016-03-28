@@ -1,0 +1,35 @@
+<div class="modal inmodal in" id="myModal" tabindex="-1" role="dialog" aria-hidden="true" style="display: block; padding-left: 0px;">
+    <div class="modal-dialog">
+        <div class="modal-content animated bounceInRight">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                <i class="fa fa-user-plus modal-icon"></i>
+                <h4 class="modal-title">{{ 'STORES.ADD.ADD_USER.TITLE' | translate }}</h4>
+            </div>
+            <div class="modal-body">
+                <form name="form" novalidate>
+                    <div class="form-group" show-errors>
+                        <label for="name">{{ 'STORES.ADD.ADD_USER.NAME' | translate }}</label>
+                        <input type="text" ng-model="StoresUserAddModalCtrl.user.name" class="form-control" id="name" name="name" placeholder="{{ 'STORES.ADD.ADD_USER.NAME' | translate }}" ng-required="true">
+                        <p class="help-block" ng-if="form.name.$error.required">{{ 'MESSAGE.FIELD_REQUIRED' | translate }}</p>
+                    </div>
+                    <div class="form-group" show-errors>
+                        <label for="email">{{ 'STORES.ADD.ADD_USER.EMAIL' | translate }}</label>
+                        <input type="email" ng-model="StoresUserAddModalCtrl.user.email" class="form-control" id="email" name="email" rows="3" placeholder="{{ 'STORES.ADD.ADD_USER.EMAIL' | translate }}" ng-required="true">
+                        <p class="help-block" ng-if="form.email.$error.required">{{ 'MESSAGE.FIELD_REQUIRED' | translate }}</p>
+                        <p class="help-block" ng-if="form.email.$error.email">{{ 'MESSAGE.FORMAT_INVALID' | translate }}</p>
+                    </div>
+                    <div class="form-group" show-errors>
+                        <label for="type">{{ 'STORES.ADD.ADD_USER.TYPE' | translate }}</label>
+                        <select ng-options="type.id as type.name for type in StoresUserAddModalCtrl.userStoreTypes" class="form-control" id="type" name="type" ng-model="StoresUserAddModalCtrl.user.type" ng-required="true"></select>
+                        <p class="help-block" ng-if="form.type.$error.required">{{ 'MESSAGE.FIELD_REQUIRED' | translate }}</p>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-white" ng-click="StoresUserAddModalCtrl.cancel()" data-dismiss="modal">{{ 'STORES.ADD.ADD_USER.CLOSE' | translate}}</button>
+                <button type="button" ng-click="StoresUserAddModalCtrl.save()" class="btn btn-primary">{{ 'STORES.ADD.ADD_USER.SAVE' | translate}}</button>
+            </div>
+        </div>
+    </div>
+</div>

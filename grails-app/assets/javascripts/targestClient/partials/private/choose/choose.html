@@ -1,0 +1,44 @@
+<div ng-include="'assets/targestClient/partials/private/header/headerChoose.html'"></div>
+<div class="container-fluid height-full animated fadeInRight">
+    <div class="container-fluid" style="margin-top: 50px;">
+        <div class="page-header">
+            <h1>{{ 'CHOOSE.TITLE' | translate }}</h1>
+        </div>
+        <div class="row">
+            <div ng-class="ChooseCtrl.buildClassCompanies($index)" ng-repeat="company in ChooseCtrl.companies">
+                <div class="widget-head-color-box navy-bg p-lg text-center">
+                    <div class="m-b-md">
+                        <h2 class="font-bold no-margins text-uppercase">
+                            {{company.name}}
+                        </h2>
+                    </div>
+                </div>
+                <div class="widget-text-box">
+                    <h4 class="media-heading">{{company.name}}</h4>
+                    <p>{{company.description}}</p>
+                    <div class="text-right">
+                        <a class="btn btn-xs btn-primary" ui-sref="company.dashboard({id: company.idCripto})"> Acessar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div ng-class="ChooseCtrl.buildClassStores($index)" ng-repeat="store in ChooseCtrl.stores">
+                <div class="widget-head-color-box lazur-bg p-lg text-center">
+                    <div class="m-b-md">
+                        <h2 class="font-bold no-margins text-uppercase">
+                            {{store.name}}
+                        </h2>
+                    </div>
+                </div>
+                <div class="widget-text-box">
+                    <h4 class="media-heading">{{store.name}}</h4>
+                    <p>{{store.description}}</p>
+                    <div class="text-right">
+                        <a class="btn btn-xs btn-primary" ui-sref="store.dashboard({id: store.idCripto})"> Acessar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

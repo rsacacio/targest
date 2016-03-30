@@ -109,6 +109,24 @@
         "SAVE": "Salvar",
         "CLOSE": "Fechar"
       }
+    },
+    "VIEW": {
+      "TITLE": "Visualizar",
+      "CREATE_ON": "Criado em",
+      "STATUS": "Status",
+      "ACTIVE": "Ativo",
+      "INACTIVE": "Inativo",
+      "TOTAL_BILLED_CAMPAIGN": "Total faturado com campanhas (em R$)",
+      "USER_LIST": {
+        "TITLE": "Usuários",
+        "NAME": "Nome",
+        "EMAIL": "E-mail",
+        "TYPE": "Tipo de usuário",
+        "REMOVE": "Remover"
+      },
+      "CAMPAIGN_LIST": {
+        "TITLE": "Campanhas"
+      }
     }
   },
   "TICKET_TYPES": {

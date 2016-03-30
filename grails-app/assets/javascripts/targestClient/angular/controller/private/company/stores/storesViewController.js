@@ -17,11 +17,13 @@
         load();
 
         function statusClass(){
-            if(self.store.status.name == 'ACTIVE'){
-                return "label-primary";
-            }
-            if(self.store.status.name == 'INACTIVE'){
-                return "label-danger";
+            if(self.store){
+                if(self.store.status.name == 'ACTIVE'){
+                    return "label-primary";
+                }
+                if(self.store.status.name == 'INACTIVE'){
+                    return "label-danger";
+                }
             }
         }
     }

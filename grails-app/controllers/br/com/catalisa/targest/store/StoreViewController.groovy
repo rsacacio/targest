@@ -18,7 +18,7 @@ class StoreViewController {
         Long storeId = Long.valueOf(AES.decryptUrl(params.storeId as String))
 
         Store store = storeViewService.load(userLogged, company, storeId)
-        respond store: ConvertStore.domainInDto(store)
+        respond store: ConvertStore.domainInDtoWithUsers(store)
     }
 
 }

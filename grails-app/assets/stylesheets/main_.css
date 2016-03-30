@@ -1606,3 +1606,8 @@ button.dim:active:before {
     color: #676a6c;
     font-weight: 600;
 }
+
+.store-details{
+    font-size: 20px;
+    font-weight: 100;
+}

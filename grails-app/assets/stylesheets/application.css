@@ -10,6 +10,7 @@
 *= require /vendor/font-awesome/css/font-awesome
 *= require /vendor/bootstrap/css/bootstrap
 *= require /vendor/angular/plugins/sweetalert/sweetalert
+*= require /vendor/angular/plugins/select/select
 *
 *= require mobile
 *= require animate

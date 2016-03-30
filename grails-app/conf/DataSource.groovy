@@ -21,7 +21,6 @@ environments {
         dataSource {
             dbCreate = "create-drop"
 //			dbCreate = "validate"
-            //url = "jdbc:postgresql://localhost:5432/fluidoc-mirror"
             url = "jdbc:postgresql://localhost:5432/targest"
             driverClassName = "org.postgresql.Driver"
             username = "postgres"
@@ -39,7 +38,7 @@ environments {
     UAT {
         dataSource {
 //			dbCreate = "validate"
-            url = "jdbc:postgresql://192.168.200.133:5432/fluidoc-NKC-779"
+            url = "jdbc:postgresql://localhost:5432/targest"
             driverClassName = "org.postgresql.Driver"
             username = "postgres"
             password = "senha1"
@@ -48,7 +47,7 @@ environments {
     }
     demo {
         dataSource {
-            url = "jdbc:postgresql://12121212:5432/fluidoc-homologacao"
+            url = "jdbc:postgresql://localhost:5432/targest"
             driverClassName = "org.postgresql.Driver"
             username = "postgres"
             password = "admin"

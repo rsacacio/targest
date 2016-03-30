@@ -25,6 +25,10 @@
     "DELETED": "Removido!",
     "DELETED_WITH_SUCCESS": "Item excluído com sucesso."
   },
+  "USER_TYPE": {
+    "ADMINISTRATOR": "Administrador",
+    "SELLER": "Vendedor"
+  },
   "DASHBOARD": {
     "TITLE": "Dashboard"
   },
@@ -79,6 +83,7 @@
       "STATUS": "Status",
       "ACTIVE": "Ativo",
       "INACTIVE": "Inativo",
+      "VIEW": "Visualizar",
       "SEARCH": "Procurar"
     },
     "EDIT": {
@@ -93,13 +98,12 @@
       "NO_USERS": "Nenhum usuário adicionado.",
       "NO_USERS_LINK": "Clique aqui para adicionar.",
       "USER_LIST": {
-        "NAME": "Nome",
         "EMAIL": "E-mail",
-        "TYPE": "Tipo de usuário"
+        "TYPE": "Tipo de usuário",
+        "REMOVE": "Remover"
       },
       "ADD_USER": {
         "TITLE": "Adiacionar usuário",
-        "NAME": "Nome",
         "EMAIL": "E-mail",
         "TYPE": "Tipo de usuário",
         "SAVE": "Salvar",

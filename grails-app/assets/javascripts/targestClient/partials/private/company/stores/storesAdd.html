@@ -26,21 +26,23 @@
             <table class="table table-striped">
                 <thead>
                 <tr>
-                    <th>{{ 'STORES.ADD.USER_LIST.NAME' | translate }}</th>
                     <th>{{ 'STORES.ADD.USER_LIST.EMAIL' | translate }}</th>
                     <th>{{ 'STORES.ADD.USER_LIST.TYPE' | translate }}</th>
+                    <th></th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr ng-repeat="user in StoresAddCtrl.store.users">
                     <td>
-                        {{user.name}}
-                    </td>
-                    <td>
                         {{user.email}}
                     </td>
                     <td>
-                        {{user.type}}
+                        {{ 'USER_TYPE.' + user.type.name | translate }}
+                    </td>
+                    <td>
+                        <a class="btn btn-white btn-sm pull-right" ng-click="StoresAddCtrl.removeUser(user)">
+                            <i class="fa fa-trash"></i> {{ 'STORES.ADD.USER_LIST.REMOVE' | translate }}
+                        </a>
                     </td>
                 </tr>
                 </tbody>

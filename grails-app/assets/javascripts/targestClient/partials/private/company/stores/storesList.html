@@ -34,6 +34,7 @@
                     <th>{{ 'STORES.LIST.NAME' | translate }}</th>
                     <th>{{ 'STORES.LIST.DESCRIPTION' | translate }}</th>
                     <th>{{ 'STORES.LIST.STATUS' | translate }}</th>
+                    <th></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -45,7 +46,12 @@
                         <span keywords="StoresListCtrl.search" highlight="store.description"></span>
                     </td>
                     <td>
-                        <a href="#"><i class="fa fa-check text-navy"></i></a>
+                        <span class="label" ng-class="StoresListCtrl.statusClass(store.status)">{{ 'STORES.LIST.' + store.status.name | translate }}</span>
+                    </td>
+                    <td>
+                        <a ui-sref="company.stores.view({storeId: store.idCripto})" class="btn btn-white btn-sm pull-right">
+                            <i class="fa fa-eye"></i> {{ 'STORES.LIST.VIEW' | translate }}
+                        </a>
                     </td>
                 </tr>
                 </tbody>

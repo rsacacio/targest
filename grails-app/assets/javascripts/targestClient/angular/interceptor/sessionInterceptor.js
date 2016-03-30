@@ -7,7 +7,6 @@
     function SessionInterceptor($location, $q, AuthenticationResourceFactory) {
         var sessionInjector = {
             request: function (config) {
-                debugger;
                 if (AuthenticationResourceFactory.isAuthenticated()) {
                     //if (config.url.indexOf('public') >= 0) {
                     //    config.headers['Authorization'] = AuthenticationResourceFactory.xToken();

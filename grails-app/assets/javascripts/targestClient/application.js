@@ -11,6 +11,7 @@
 //= require /vendor/angular/plugins/angular-screenfull
 //= require /vendor/angular/plugins/sweetalert/sweetalert
 //= require /vendor/angular/plugins/sweetalert/ng-sweetalert
+//= require /vendor/angular/plugins/select/select
 //= require /vendor/jquery/screenfull
 //= require /vendor/jquery/icheck
 //

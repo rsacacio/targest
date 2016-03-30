@@ -6,18 +6,19 @@ import br.com.catalisa.targest.encode.AES
 import br.com.catalisa.targest.helper.UserHelper
 import br.com.catalisa.targest.user.TargestUser
 
-class StoreListController {
+class StoreViewController {
 
     static responseFormats = ['json']
 
-    StoreListService storeListService
+    StoreViewService storeViewService
 
     def load(){
         TargestUser userLogged = UserHelper.user
         Company company = Company.get(Long.valueOf(AES.decryptUrl(params.idCripto as String)))
+        Long storeId = Long.valueOf(AES.decryptUrl(params.storeId as String))
 
-        List<Store> stores = storeListService.load(userLogged, company)
-        respond stores: ConvertStore.domainInDtoList(stores)
+        Store store = storeViewService.load(userLogged, company, storeId)
+        respond store: ConvertStore.domainInDto(store)
     }
 
 }

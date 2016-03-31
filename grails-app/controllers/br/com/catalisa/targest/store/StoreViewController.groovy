@@ -21,4 +21,22 @@ class StoreViewController {
         respond store: ConvertStore.domainInDtoWithUsers(store)
     }
 
+    def unlock(){
+        TargestUser userLogged = UserHelper.user
+        Company company = Company.get(Long.valueOf(AES.decryptUrl(params.idCripto as String)))
+        Long storeId = Long.valueOf(AES.decryptUrl(params.storeId as String))
+
+        boolean success = storeViewService.unlock(userLogged, company, storeId)
+        respond success: success
+    }
+
+    def lock(){
+        TargestUser userLogged = UserHelper.user
+        Company company = Company.get(Long.valueOf(AES.decryptUrl(params.idCripto as String)))
+        Long storeId = Long.valueOf(AES.decryptUrl(params.storeId as String))
+
+        boolean success = storeViewService.lock(userLogged, company, storeId)
+        respond success: success
+    }
+
 }

@@ -5,9 +5,13 @@
         </div>
         <div class="ibox-content">
             <div class="m-b-md">
-                <a href="#" class="btn btn-white btn-sm pull-right">
-                    <i class="fa fa-ban"></i>
+                <a ng-click="StoresViewCtrl.lock()" ng-if="StoresViewCtrl.store.status.name == 'ACTIVE'" class="btn btn-white btn-sm pull-right">
+                    <i class="fa fa-lock"></i>
                     Desativar Loja
+                </a>
+                <a ng-click="StoresViewCtrl.unlock()" ng-if="StoresViewCtrl.store.status.name == 'INACTIVE'"  class="btn btn-white btn-sm pull-right">
+                    <i class="fa fa-unlock"></i>
+                    Ativar Loja
                 </a>
                 <h1>
                     {{StoresViewCtrl.store.name}}
@@ -91,7 +95,7 @@
             <h3>{{ 'STORES.VIEW.CAMPAIGN_LIST.TITLE' | translate }}</h3>
         </div>
         <div class="ibox-content">
-            <table class="footable table table-stripped toggle-arrow-tiny default breakpoint footable-loaded" data-page-size="15">
+            <table class="table table-striped" data-page-size="15">
                 <thead>
                     <tr>
                         <th>Nome</th>

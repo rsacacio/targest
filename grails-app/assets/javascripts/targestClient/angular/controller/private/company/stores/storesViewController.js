@@ -8,6 +8,8 @@
     function StoresViewController(StoresViewService, $stateParams) {
         var self = this;
         self.statusClass = statusClass;
+        self.unlock = unlock;
+        self.lock = lock;
 
         function load(){
             StoresViewService.load($stateParams.storeId).success(function (data) {
@@ -25,6 +27,18 @@
                     return "label-danger";
                 }
             }
+        }
+
+        function unlock() {
+            StoresViewService.unlock($stateParams.storeId).success(function (data) {
+               load();
+            });
+        }
+
+        function lock() {
+            StoresViewService.lock($stateParams.storeId).success(function (data) {
+                load();
+            });
         }
     }
 

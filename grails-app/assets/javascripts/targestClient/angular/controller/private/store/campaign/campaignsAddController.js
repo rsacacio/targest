@@ -9,6 +9,10 @@
         var self = this;
         self.save = save;
 
+        self.campaign = {};
+        self.today = new Date();
+        self.campaign.period = {startDate: null, endDate: null};
+
         function save(){
             $scope.$broadcast('show-errors-check-validity');
             if ($scope.form.$valid) {
@@ -22,7 +26,6 @@
 
         function loadTicketTypes(){
             CampaignsAddService.loadTicketTypes().success(function (data) {
-                console.log(data);
                self.ticketTypes = data.ticketTypes;
             });
         }
@@ -30,7 +33,6 @@
 
         function loadCategories(){
             CampaignsAddService.loadCategories().success(function (data) {
-                console.log(data);
                 self.categories = data.categories;
             });
         }

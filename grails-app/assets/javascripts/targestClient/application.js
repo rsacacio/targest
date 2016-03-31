@@ -14,6 +14,9 @@
 //= require /vendor/angular/plugins/select/select
 //= require /vendor/jquery/screenfull
 //= require /vendor/jquery/icheck
+//= require /vendor/useful/moment
+//= require /vendor/jquery/daterangepicker/daterangepicker
+//= require /vendor/angular/plugins/daterangepicker/daterangepicker
 //
 //= require /vendor/bootstrap/js/bootstrap
 //

@@ -10,7 +10,7 @@
         self.isActive = isActive;
 
         function isActive(path){
-            var current = $location.path().split('/')[3];
+            var current = $location.path().split('/')[4];
             return path === current ? 'active' : '';
         }
     }

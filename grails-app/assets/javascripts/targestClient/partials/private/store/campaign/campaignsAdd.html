@@ -1,63 +1,63 @@
-<div class="ibox-title">
-    <h3>{{ 'CAMPAIGN.ADD.TITLE' | translate }}</h3>
-</div>
-<div class="ibox-content">
-    <form name="form" novalidate>
-        <div class="form-group" show-errors>
-            <label for="name">{{ 'CAMPAIGN.ADD.NAME' | translate }}</label>
-            <input type="text" ng-model="CampaignAddCtrl.campaign.name" class="form-control" id="name" name="name" placeholder="{{ 'CAMPAIGN.ADD.NAME' | translate }}" ng-required="true">
-            <p class="help-block" ng-if="form.name.$error.required">{{ 'MESSAGE.FIELD_REQUIRED' | translate }}</p>
-        </div>
-        <div class="form-group">
-            <label for="description">{{ 'CAMPAIGN.ADD.DESCRIPTION' | translate }}</label>
-            <textarea type="textarea" ng-model="CampaignAddCtrl.campaign.description" class="form-control" id="description" rows="3" placeholder="{{ 'CAMPAIGN.ADD.DESCRIPTION' | translate }}"></textarea>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group" show-errors>
-                    <label for="name">{{ 'CAMPAIGN.ADD.START' | translate }}</label>
-                    <input type="date" ng-model="CampaignAddCtrl.campaign.start" class="form-control" id="start" name="start" placeholder="{{ 'CAMPAIGN.ADD.START' | translate }}" ng-required="true">
-                    <p class="help-block" ng-if="form.start.$error.required">{{ 'MESSAGE.FIELD_REQUIRED' | translate }}</p>
-                </div>
+<div class="animated fadeInRight">
+    <div class="ibox-title">
+        <h3>{{ 'CAMPAIGN.ADD.TITLE' | translate }}</h3>
+    </div>
+    <div class="ibox-content">
+        <form name="form" novalidate>
+            <div class="form-group" show-errors>
+                <label for="name">{{ 'CAMPAIGN.ADD.NAME' | translate }}</label>
+                <input type="text" ng-model="CampaignsAddCtrl.campaign.name" class="form-control" id="name" name="name" placeholder="{{ 'CAMPAIGN.ADD.NAME' | translate }}" ng-required="true">
+                <p class="help-block" ng-if="form.name.$error.required">{{ 'MESSAGE.FIELD_REQUIRED' | translate }}</p>
             </div>
-            <div class="col-md-6">
-                <div class="form-group" show-errors>
-                    <label for="name">{{ 'CAMPAIGN.ADD.END' | translate }}</label>
-                    <input type="date" ng-model="CampaignAddCtrl.campaign.end" class="form-control" id="end" name="end" placeholder="{{ 'CAMPAIGN.ADD.END' | translate }}" ng-required="true">
-                    <p class="help-block" ng-if="form.end.$error.required">{{ 'MESSAGE.FIELD_REQUIRED' | translate }}</p>
-                </div>
+            <div class="form-group">
+                <label for="description">{{ 'CAMPAIGN.ADD.DESCRIPTION' | translate }}</label>
+                <textarea type="textarea" ng-model="CampaignsAddCtrl.campaign.description" class="form-control" id="description" rows="3" placeholder="{{ 'CAMPAIGN.ADD.DESCRIPTION' | translate }}"></textarea>
             </div>
-        </div>
-        <div class="form-group">
-            <label>{{ 'CAMPAIGN.ADD.CATEGORY' | translate }}</label>
             <div class="row">
                 <div class="col-md-6">
-                    <div class="i-checks">
-                        <label class="">
-                            <input type="checkbox" value="" ng-model="teste" style="position: absolute; opacity: 0;" i-check> Teste
-                        </label>
+                    <div class="form-group" show-errors>
+                        <label for="name">{{ 'CAMPAIGN.ADD.START' | translate }}</label>
+                        <input type="date" ng-model="CampaignsAddCtrl.campaign.start" class="form-control" id="start" name="start" placeholder="{{ 'CAMPAIGN.ADD.START' | translate }}" ng-required="true">
+                        <p class="help-block" ng-if="form.start.$error.required">{{ 'MESSAGE.FIELD_REQUIRED' | translate }}</p>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="i-checks">
-                        <label class="">
-                            <input type="checkbox" value="" ng-model="teste" style="position: absolute; opacity: 0;" i-check> Teste
-                        </label>
+                    <div class="form-group" show-errors>
+                        <label for="name">{{ 'CAMPAIGN.ADD.END' | translate }}</label>
+                        <input type="date" ng-model="CampaignsAddCtrl.campaign.end" class="form-control" id="end" name="end" placeholder="{{ 'CAMPAIGN.ADD.END' | translate }}" ng-required="true">
+                        <p class="help-block" ng-if="form.end.$error.required">{{ 'MESSAGE.FIELD_REQUIRED' | translate }}</p>
                     </div>
                 </div>
             </div>
+            <div class="form-group">
+                <label>{{ 'CAMPAIGN.ADD.CATEGORY' | translate }}</label>
+                <ui-select multiple ng-model="CampaignsAddCtrl.categoriesSelected" theme="bootstrap" >
+                    <ui-select-match placeholder=" ">{{$item.name}}</ui-select-match>
+                    <ui-select-choices repeat="category in CampaignsAddCtrl.categories | propsFilter: {name: $select.search}">
+                        <div ng-bind-html="category.name | highlight: $select.search"></div>
+                    </ui-select-choices>
+                </ui-select>
+                <p class="help-block" ng-if="form.categories.$error.required">{{ 'MESSAGE.FIELD_REQUIRED' | translate }}</p>
+            </div>
+            <div class="form-group" show-errors>
+                <label>{{ 'CAMPAIGN.ADD.TICKET_TYPE' | translate }}</label>
+                <ui-select name="ticketType" id="ticketType" ng-model="CampaignsAddCtrl.campaign.ticketType" ng-required="true">
+                    <ui-select-match>
+                        <span> {{ $select.selected.name | translate}}</span>
+                    </ui-select-match>
+                    <ui-select-choices repeat="item in (CampaignsAddCtrl.ticketTypes | filter: $select.search)">
+                        <span>{{ item.name | translate}}</span>
+                    </ui-select-choices>
+                </ui-select>
+                <p class="help-block" ng-if="form.ticketType.$error.required">{{ 'MESSAGE.FIELD_REQUIRED' | translate }}</p>
+            </div>
+        </form>
+    </div>
+    <div class="ibox-footer">
+        <div class="pull-right">
+            <button class="btn btn-primary " type="button" ng-click="CampaignsAddCtrl.save()">
+                <i class="fa fa-check"></i>&nbsp;{{ 'CAMPAIGN.ADD.SAVE' | translate }}
+            </button>
         </div>
-        <div class="form-group" show-errors>
-            <label for="type">{{ 'CAMPAIGN.ADD.TICKET_TYPE' | translate }}</label>
-            <select ng-options="type.id as type.name for type in CampaignAddCtrl.ticketTypes" class="form-control" id="ticketType" name="ticketType" ng-model="CampaignAddCtrl.campaign.ticketType" ng-required="true"></select>
-            <p class="help-block" ng-if="form.ticketType.$error.required">{{ 'MESSAGE.FIELD_REQUIRED' | translate }}</p>
-        </div>
-    </form>
-</div>
-<div class="ibox-footer">
-    <div class="pull-right">
-        <button class="btn btn-primary " type="button" ng-click="CampaignAddCtrl.save()">
-            <i class="fa fa-check"></i>&nbsp;{{ 'CAMPAIGN.ADD.SAVE' | translate }}
-        </button>
     </div>
 </div>

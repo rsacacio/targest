@@ -1,23 +1,25 @@
-<div class="ibox-title">
-    <h3>{{ 'TICKET_TYPES.ADD.TITLE' | translate }}</h3>
-</div>
-<div class="ibox-content">
-    <form name="form" novalidate>
-        <div class="form-group" show-errors>
-            <label for="name">{{ 'TICKET_TYPES.ADD.NAME' | translate }}</label>
-            <input type="text" ng-model="TicketTypeAddCtrl.ticketType.name" class="form-control" name="name" id="name" placeholder="{{ 'TICKET_TYPES.ADD.NAME' | translate }}" ng-required="true">
-            <p class="help-block" ng-if="form.name.$error.required">{{ 'MESSAGE.FIELD_REQUIRED' | translate }}</p>
+<div class="animated fadeInRight">
+    <div class="ibox-title">
+        <h3>{{ 'TICKET_TYPES.ADD.TITLE' | translate }}</h3>
+    </div>
+    <div class="ibox-content">
+        <form name="form" novalidate>
+            <div class="form-group" show-errors>
+                <label for="name">{{ 'TICKET_TYPES.ADD.NAME' | translate }}</label>
+                <input type="text" ng-model="TicketTypeAddCtrl.ticketType.name" class="form-control" name="name" id="name" placeholder="{{ 'TICKET_TYPES.ADD.NAME' | translate }}" ng-required="true">
+                <p class="help-block" ng-if="form.name.$error.required">{{ 'MESSAGE.FIELD_REQUIRED' | translate }}</p>
+            </div>
+            <div class="form-group">
+                <label for="description">{{ 'TICKET_TYPES.ADD.DESCRIPTION' | translate }}</label>
+                <textarea type="textarea" ng-model="TicketTypeAddCtrl.ticketType.description" class="form-control" rows="3" id="description" placeholder="{{ 'TICKET_TYPES.ADD.DESCRIPTION' | translate }}"></textarea>
+            </div>
+        </form>
+    </div>
+    <div class="ibox-footer">
+        <div class="pull-right">
+            <button class="btn btn-primary" type="button" ng-click="TicketTypeAddCtrl.save()">
+                <i class="fa fa-check"></i>&nbsp;{{ 'TICKET_TYPES.ADD.SAVE' | translate }}
+            </button>
         </div>
-        <div class="form-group">
-            <label for="description">{{ 'TICKET_TYPES.ADD.DESCRIPTION' | translate }}</label>
-            <textarea type="textarea" ng-model="TicketTypeAddCtrl.ticketType.description" class="form-control" rows="3" id="description" placeholder="{{ 'TICKET_TYPES.ADD.DESCRIPTION' | translate }}"></textarea>
-        </div>
-    </form>
-</div>
-<div class="ibox-footer">
-    <div class="pull-right">
-        <button class="btn btn-primary" type="button" ng-click="TicketTypeAddCtrl.save()">
-            <i class="fa fa-check"></i>&nbsp;{{ 'TICKET_TYPES.ADD.SAVE' | translate }}
-        </button>
     </div>
 </div>

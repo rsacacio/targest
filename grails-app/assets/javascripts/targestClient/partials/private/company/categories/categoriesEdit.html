@@ -1,25 +1,27 @@
-<div class="ibox-title">
-    <h3>{{ 'CATEGORIES.EDIT.TITLE' | translate }}</h3>
-</div>
-<div class="ibox-content">
-    <form>
-        <div class="form-group">
-            <label for="name">{{ 'CATEGORIES.EDIT.NAME' | translate }}</label>
-            <input type="text" class="form-control" id="name" placeholder="{{ 'CATEGORIES.ADD.NAME' | translate }}">
+<div class="animated fadeInRight">
+    <div class="ibox-title">
+        <h3>{{ 'CATEGORIES.EDIT.TITLE' | translate }}</h3>
+    </div>
+    <div class="ibox-content">
+        <form>
+            <div class="form-group">
+                <label for="name">{{ 'CATEGORIES.EDIT.NAME' | translate }}</label>
+                <input type="text" class="form-control" id="name" placeholder="{{ 'CATEGORIES.ADD.NAME' | translate }}">
+            </div>
+            <div class="form-group">
+                <label for="description">{{ 'CATEGORIES.EDIT.DESCRIPTION' | translate }}</label>
+                <input type="textarea" class="form-control" id="description" placeholder="{{ 'CATEGORIES.ADD.DESCRIPTION' | translate }}">
+            </div>
+        </form>
+    </div>
+    <div class="ibox-footer">
+        <div class="pull-right">
+            <button class="btn btn-primary " type="button">
+                <i class="fa fa-check"></i>&nbsp;{{ 'CATEGORIES.EDIT.SAVE' | translate }}
+            </button>
+            <button class="btn btn-default " type="button" ui-sref="categories.list">
+                <i class="fa fa-times"></i>&nbsp;{{ 'CATEGORIES.EDIT.CANCEL' | translate }}
+            </button>
         </div>
-        <div class="form-group">
-            <label for="description">{{ 'CATEGORIES.EDIT.DESCRIPTION' | translate }}</label>
-            <input type="textarea" class="form-control" id="description" placeholder="{{ 'CATEGORIES.ADD.DESCRIPTION' | translate }}">
-        </div>
-    </form>
-</div>
-<div class="ibox-footer">
-    <div class="pull-right">
-        <button class="btn btn-primary " type="button">
-            <i class="fa fa-check"></i>&nbsp;{{ 'CATEGORIES.EDIT.SAVE' | translate }}
-        </button>
-        <button class="btn btn-default " type="button" ui-sref="categories.list">
-            <i class="fa fa-times"></i>&nbsp;{{ 'CATEGORIES.EDIT.CANCEL' | translate }}
-        </button>
     </div>
 </div>

@@ -1,22 +1,24 @@
-<div class="ibox-title">
-    <h3>{{ 'CONFIG.PROFILE.TITLE' | translate }}</h3>
-</div>
-<div class="ibox-content">
-    <form>
-        <div class="form-group">
-            <label for="name">{{ 'CONFIG.PROFILE.NAME' | translate }}</label>
-            <input type="text" class="form-control" id="name" placeholder="{{ 'CONFIG.PROFILE.NAME' | translate }}">
+<div class="animated fadeInRight">
+    <div class="ibox-title">
+        <h3>{{ 'CONFIG.PROFILE.TITLE' | translate }}</h3>
+    </div>
+    <div class="ibox-content">
+        <form>
+            <div class="form-group">
+                <label for="name">{{ 'CONFIG.PROFILE.NAME' | translate }}</label>
+                <input type="text" class="form-control" id="name" placeholder="{{ 'CONFIG.PROFILE.NAME' | translate }}">
+            </div>
+            <div class="form-group">
+                <label for="email">{{ 'CONFIG.PROFILE.EMAIL' | translate }}</label>
+                <input type="email" class="form-control" id="email" placeholder="{{ 'CONFIG.PROFILE.EMAIL' | translate }}">
+            </div>
+        </form>
+    </div>
+    <div class="ibox-footer">
+        <div class="pull-right">
+            <button class="btn btn-primary " type="button">
+                <i class="fa fa-check"></i>&nbsp;{{ 'CONFIG.PROFILE.SAVE' | translate }}
+            </button>
         </div>
-        <div class="form-group">
-            <label for="email">{{ 'CONFIG.PROFILE.EMAIL' | translate }}</label>
-            <input type="email" class="form-control" id="email" placeholder="{{ 'CONFIG.PROFILE.EMAIL' | translate }}">
-        </div>
-    </form>
-</div>
-<div class="ibox-footer">
-    <div class="pull-right">
-        <button class="btn btn-primary " type="button">
-            <i class="fa fa-check"></i>&nbsp;{{ 'CONFIG.PROFILE.SAVE' | translate }}
-        </button>
     </div>
 </div>

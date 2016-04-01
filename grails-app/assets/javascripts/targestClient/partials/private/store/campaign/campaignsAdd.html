@@ -17,14 +17,14 @@
                 <div class="col-md-6">
                     <div class="form-group" show-errors>
                         <label for="name">{{ 'CAMPAIGN.ADD.PERIOD' | translate }}</label>
-                        <targest-date-picker single="false" required="true" ng-model="CampaignsAddCtrl.campaign.period" name="period" min="CampaignsAddCtrl.today"></targest-date-picker>
+                        <targest-date-picker single="false" required="true" ng-model="CampaignsAddCtrl.period" name="period" min="CampaignsAddCtrl.today"></targest-date-picker>
                         <p class="help-block" ng-if="form.period.$error.required">{{ 'MESSAGE.FIELD_REQUIRED' | translate }}</p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group" show-errors>
                         <label>{{ 'CAMPAIGN.ADD.TICKET_TYPE' | translate }}</label>
-                        <ui-select name="ticketType" id="ticketType" ng-model="CampaignsAddCtrl.campaign.ticketType" ng-required="true">
+                        <ui-select name="ticketType" id="ticketType" ng-model="CampaignsAddCtrl.ticketTypeSelected" ng-required="true">
                             <ui-select-match>
                                 <span> {{ $select.selected.name | translate}}</span>
                             </ui-select-match>

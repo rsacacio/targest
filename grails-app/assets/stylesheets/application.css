@@ -17,6 +17,7 @@
 *= require animate
 *= require main_
 *= require custom
+*= require toastr
 *
 *= require_self
 */

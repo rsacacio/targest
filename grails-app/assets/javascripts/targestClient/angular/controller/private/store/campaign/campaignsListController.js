@@ -8,20 +8,29 @@
     function CampaignsListController(CampaignListService, $filter, SweetAlert) {
         var self = this;
         self.remove = remove;
+        self.statusClass = statusClass;
 
         self.search = '';
 
         function load(){
             CampaignListService.load().success(function (data) {
-                console.log(data);
-                self.categories = data.categories;
+                self.campaigns = data.campaigns;
             });
         }
         load();
 
-        function remove(category){
+        function statusClass(status){
+            if(status.name == 'ACTIVE'){
+                return "label-primary";
+            }
+            if(status.name == 'INACTIVE'){
+                return "label-danger";
+            }
+        }
+
+        function remove(campaign){
             SweetAlert.swal({
-                title: $filter('translate')('MESSAGE.ARE_YOU_SURE_ITEM', {itemName: category.name}),
+                title: $filter('translate')('MESSAGE.ARE_YOU_SURE_ITEM', {itemName: campaign.name}),
                 text: $filter('translate')('MESSAGE.DELETION_IS_NOT_RECOVER'),
                 type: "warning",
                 showCancelButton: true,

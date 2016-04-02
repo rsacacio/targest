@@ -1,6 +1,6 @@
 
 
-var module = angular.module('targestApp', [ 'ui.router', 'ngSanitize',  'ngCookies', 'ngAnimate', 'angularSpinners', 'pascalprecht.translate', 'angularModalService', 'angularScreenfull', 'oitozero.ngSweetAlert', 'ui.select', 'daterangepicker']);
+var module = angular.module('targestApp', [ 'ui.router', 'ngSanitize', 'ngCookies', 'ngAnimate', 'angularSpinners', 'pascalprecht.translate', 'angularModalService', 'angularScreenfull', 'oitozero.ngSweetAlert', 'ui.select', 'daterangepicker', 'ui.sortable', 'toastr']);
 
 module.value('redirectToUrlAfterLogin', {url: '/'});
 

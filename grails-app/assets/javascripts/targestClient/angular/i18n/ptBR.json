@@ -23,7 +23,9 @@
     "YES_I_SURE": "Sim eu tenho!",
     "NO_THANKS": "Não, obrigado!",
     "DELETED": "Removido!",
-    "DELETED_WITH_SUCCESS": "Item excluído com sucesso."
+    "DELETED_WITH_SUCCESS": "Item excluído com sucesso.",
+    "SUCCESS": "Operação realizada com sucesso.",
+    "ERROR": "Erro ao realizar operação."
   },
   "CALENDAR":
   {
@@ -235,10 +237,14 @@
       "TITLE": "Listar",
       "NAME": "Nome",
       "DESCRIPTION": "Descrição",
+      "END": "Fim",
+      "START": "Início",
       "STATUS": "Status",
       "ACTIVE": "Ativo",
       "INACTIVE": "Inativo",
-      "SEARCH": "Procurar"
+      "SEARCH": "Procurar",
+      "REMOVE": "Remover",
+      "VIEW": "Visualizar"
     },
     "EDIT": {
       "TITLE": "Editar"

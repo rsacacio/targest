@@ -28,7 +28,7 @@
 
                 CampaignsAddService.save(self.campaign).success(function (data) {
                     if (data.success) {
-                        $state.go('company.campaigns.list');
+                        $state.go('store.campaigns.list');
                     }
                 });
             }

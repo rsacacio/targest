@@ -25,7 +25,7 @@ environments {
             url = "jdbc:postgresql://localhost:5432/targest"
             driverClassName = "org.postgresql.Driver"
             username = "postgres"
-            password = "senha1"
+            password = "admin"
             logSql = true
         }
     }

@@ -21,8 +21,8 @@ class ConvertCampaign {
     public static CampaignDto domainInDto(Campaign domain){
         CampaignDto dto = new CampaignDto()
         dto.idCripto = AES.encryptUrl(String.valueOf(domain.id))
-        dto.startDate = domain.start
-        dto.endDate = domain.end
+        dto.startDate = domain.startDate
+        dto.endDate = domain.endDate
         dto.ticketType = ConvertTicketType.domainInDto(domain.ticketType)
         dto.categories = ConvertCategory.domainInDtoList(domain.categories)
         dto.description = domain.description
@@ -35,8 +35,8 @@ class ConvertCampaign {
         Campaign campaign = new Campaign()
         campaign.name = command.name
         campaign.description = command.description
-        campaign.start = command.startDate
-        campaign.end = command.endDate
+        campaign.startDate = command.startDate
+        campaign.endDate = command.endDate
         campaign.ticketType = TicketType.get(Long.valueOf(AES.decryptUrl(command.ticketTypeIdCripto as String)))
 
         List<Category> categories = new ArrayList<Category>()

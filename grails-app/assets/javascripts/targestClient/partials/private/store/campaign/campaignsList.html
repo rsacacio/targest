@@ -3,11 +3,11 @@
         <h3>{{ 'CAMPAIGN.LIST.TITLE' | translate }}</h3>
     </div>
     <div class="ibox-content">
-        <div ng-if="CampaignListCtrl.campaigns.length > 0">
+        <div ng-if="CampaignsListCtrl.campaigns.length > 0">
             <div class="row">
                 <div class="col-sm-4">
                     <div class="input-group">
-                        <input type="text" placeholder="{{ 'CAMPAIGN.LIST.SEARCH' | translate }}" ng-model="CampaignListCtrl.search" class="input-sm form-control">
+                        <input type="text" placeholder="{{ 'CAMPAIGN.LIST.SEARCH' | translate }}" ng-model="CampaignsListCtrl.search" class="input-sm form-control">
                         <span class="input-group-btn">
                             <button type="button" class="btn btn-sm btn-primary"> <i class="fa fa-search"></i></button>
                         </span>
@@ -28,7 +28,7 @@
                     </div>
                 </div>
             </div>
-            <div class="table-responsive" ng-if="(CampaignsListCtrl.campaigns | filter: CampaignListCtrl.search).length > 0">
+            <div class="table-responsive" ng-if="(CampaignsListCtrl.campaigns | filter: CampaignsListCtrl.search).length > 0">
                 <table class="table table-striped">
                     <thead>
                     <tr>
@@ -41,30 +41,39 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr ng-repeat="campaign in CampaignListCtrl.campaigns | filter: CampaignListCtrl.search">
+                    <tr ng-repeat="campaign in CampaignsListCtrl.campaigns | filter: CampaignsListCtrl.search">
                         <td>
-                            <span keywords="CampaignListCtrl.search" highlight="campaign.name"></span>
+                            <span keywords="CampaignsListCtrl.search" highlight="campaign.name"></span>
                         </td>
                         <td>
-                            <span keywords="CampaignListCtrl.search" highlight="campaign.description"></span>
+                            <span keywords="CampaignsListCtrl.search" highlight="campaign.description"></span>
                         </td>
                         <td>
-                            <a href="#"><i class="fa fa-check text-navy"></i></a>
+                            <span>{{campaign.startDate | date}}</span>
                         </td>
                         <td>
-                            <a style="cursor: pointer" ng-click="CampaignsListCtrl.remove(campaign)">
-                                <i class="fa fa-times"></i>
+                            <span>{{campaign.endDate | date}}</span>
+                        </td>
+                        <td>
+                            <span class="label" ng-class="CampaignsListCtrl.statusClass(campaign.status)">{{ 'CAMPAIGN.LIST.' + campaign.status.name | translate }}</span>
+                        </td>
+                        <td>
+                            <a class="btn btn-white btn-xs pull-right" ng-click="CampaignsListCtrl.remove(campaign)">
+                                <i class="fa fa-trash"></i> {{ 'CAMPAIGN.LIST.REMOVE' | translate }}
+                            </a>
+                            <a class="btn btn-white btn-xs pull-right" ui-sref="store.campaigns.view">
+                                <i class="fa fa-eye"></i> {{ 'CAMPAIGN.LIST.VIEW' | translate }}
                             </a>
                         </td>
                     </tr>
                     </tbody>
                 </table>
             </div>
-            <div class="alert alert-warning" ng-if="(CampaignListCtrl.campaigns | filter: CampaignListCtrl.search).length == 0">
+            <div class="alert alert-warning" ng-if="(CampaignsListCtrl.campaigns | filter: CampaignsListCtrl.search).length == 0">
                 {{ 'CAMPAIGN.NO_CAMPAIGN_FOUND' | translate }}
             </div>
         </div>
-        <div class="alert alert-info" ng-if="CampaignListCtrl.campaigns.length == 0">
+        <div class="alert alert-info" ng-if="CampaignsListCtrl.campaigns.length == 0">
             {{ 'CAMPAIGN.NO_CAMPAIGN' | translate }}
             <a class="alert-link" ui-sref="company.campaigns.add">{{ 'CAMPAIGN.NO_CAMPAIGN_LINK' | translate }}</a>
         </div>

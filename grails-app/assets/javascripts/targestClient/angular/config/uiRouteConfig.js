@@ -300,7 +300,7 @@
                     views: {
                         'viewCampaigns': {
                             templateUrl: 'assets/targestClient/partials/private/store/campaign/campaignsList.html',
-                            controller : 'CampaignsListController as CategoriesListCtrl'
+                            controller : 'CampaignsListController as CampaignsListCtrl'
                         }
                     }
                 })

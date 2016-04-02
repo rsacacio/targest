@@ -1,4 +1,5 @@
 //= require /vendor/jquery/jquery-1.12.0
+//= require /vendor/jquery/jquery-ui
 //= require /vendor/angular/angular
 //= require /vendor/angular/plugins/ui-router
 //= require /vendor/angular/modules/angular-sanitize
@@ -12,6 +13,8 @@
 //= require /vendor/angular/plugins/sweetalert/sweetalert
 //= require /vendor/angular/plugins/sweetalert/ng-sweetalert
 //= require /vendor/angular/plugins/select/select
+//= require /vendor/angular/plugins/sortable/ng-sortable
+//= require /vendor/angular/plugins/toastr/angular-toastr-tpls
 //= require /vendor/jquery/screenfull
 //= require /vendor/jquery/icheck
 //= require /vendor/useful/moment

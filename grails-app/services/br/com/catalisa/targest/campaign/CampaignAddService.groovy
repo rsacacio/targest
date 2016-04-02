@@ -17,8 +17,8 @@ class CampaignAddService {
         campaign.name = campaignToAdd.name
         campaign.description = campaignToAdd.description
         campaign.creation = new Date()
-        campaign.start = campaignToAdd.start
-        campaign.end = campaignToAdd.end
+        campaign.startDate = campaignToAdd.startDate
+        campaign.endDate = campaignToAdd.endDate
         campaign.status = CampaignStatus.ACTIVE
         campaign.ticketType = campaignToAdd.ticketType
         campaign.categories = campaignToAdd.categories

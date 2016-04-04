@@ -12,12 +12,15 @@
 *= require /vendor/angular/plugins/sweetalert/sweetalert
 *= require /vendor/angular/plugins/select/select
 *= require /vendor/jquery/daterangepicker/daterangepicker
+*= require /vendor/angular/plugins/summernote/summernote
 *
 *= require mobile
 *= require animate
 *= require main_
 *= require custom
 *= require toastr
+*= require summernote-bs3
+*= require summernote-custom
 *
 *= require_self
 */

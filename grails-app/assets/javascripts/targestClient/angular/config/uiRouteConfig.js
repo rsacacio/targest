@@ -244,8 +244,8 @@
                     url: '/config',
                     views: {
                         'viewCompany': {
-                            templateUrl: 'assets/targestClient/partials/private/config/config.html',
-                            controller : 'ConfigController as ConfigCtrl'
+                            templateUrl: 'assets/targestClient/partials/private/company/config/configCompany.html',
+                            controller : 'ConfigCompanyController as ConfigCompanyCtrl'
                         }
                     }
                 })
@@ -255,7 +255,7 @@
                     url: '/profile',
                     views: {
                         'viewConfig': {
-                            templateUrl: 'assets/targestClient/partials/private/config/profile/profileEdit.html',
+                            templateUrl: 'assets/targestClient/partials/private/profile/profileEdit.html',
                             controller : 'ProfileEditController as ProfileEditCtrl'
                         }
                     }

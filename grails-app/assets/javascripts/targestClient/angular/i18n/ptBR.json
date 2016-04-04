@@ -210,19 +210,23 @@
       "SAVE": "Salvar"
     }
   },
-  "CONFIG": {
+  "CONFIG_COMPANY": {
     "TITLE": "Configurações",
     "MENU": {
       "PROFILE": "Perfil",
       "PREFERENCES": "Preferências",
       "USERS": "Usuários"
-    },
-    "PROFILE": {
-      "TITLE": "Perfil",
-      "NAME": "Nome",
-      "EMAIL": "E-mail",
-      "SAVE": "Salvar"
     }
+  },
+  "PROFILE": {
+    "TITLE": "Perfil",
+    "NAME": "Nome",
+    "EMAIL": "E-mail",
+    "CHANGE_PASSWORD": "Alterar senha",
+    "OLD_PASSWORD": "Senha anterior",
+    "NEW_PASSWORD": "Nova senha",
+    "CONFIRM_NEW_PASSWORD": "Confirme a nova senha",
+    "SAVE": "Salvar"
   },
   "CAMPAIGN": {
     "TITLE": "Campanhas",

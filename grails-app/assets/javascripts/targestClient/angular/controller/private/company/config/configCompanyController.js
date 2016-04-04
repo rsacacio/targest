@@ -1,11 +1,11 @@
 (function () {
     'use strict';
 
-    angular.module('targestApp').controller('ConfigController', ConfigController);
+    angular.module('targestApp').controller('ConfigCompanyController', ConfigCompanyController);
 
-    ConfigController.$inject = ['$location'];
+    ConfigCompanyController.$inject = ['$location'];
 
-    function ConfigController($location) {
+    function ConfigCompanyController($location) {
         var self = this;
         self.isActive = isActive;
 

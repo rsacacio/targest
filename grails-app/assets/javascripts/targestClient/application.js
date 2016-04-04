@@ -20,6 +20,10 @@
 //= require /vendor/useful/moment
 //= require /vendor/jquery/daterangepicker/daterangepicker
 //= require /vendor/angular/plugins/daterangepicker/daterangepicker
+
+//= require /vendor/angular/plugins/summernote/summernote
+//= require /vendor/angular/plugins/summernote/lang/summernote-pt-BR
+//= require /vendor/angular/plugins/summernote/angular-summernote
 //
 //= require /vendor/bootstrap/js/bootstrap
 //

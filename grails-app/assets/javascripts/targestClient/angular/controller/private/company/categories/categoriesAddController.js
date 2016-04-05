@@ -19,15 +19,6 @@
                 });
             }
         }
-
-        self.options = {
-            height: 150,
-            toolbar: [
-                ['style', ['bold', 'italic', 'underline', 'clear']],
-                ['para', ['ul', 'ol', 'paragraph']],
-                ['height', ['height']]
-            ]
-        };
     }
 
 })();

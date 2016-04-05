@@ -10,8 +10,8 @@
                 <p class="help-block" ng-if="form.name.$error.required">{{ 'MESSAGE.FIELD_REQUIRED' | translate }}</p>
             </div>
             <div class="form-group">
-                <label>{{ 'CATEGORIES.ADD.DESCRIPTION' | translate }}</label>
-                <summernote height="300" lang="pt-BR" config="CategoriesAddCtrl.options" name="description" ng-model="CategoriesAddCtrl.category.description"></summernote>
+                <label for="description">{{ 'CATEGORIES.ADD.DESCRIPTION' | translate }}</label>
+                <textarea type="textarea" ng-model="CategoriesAddCtrl.category.description" class="form-control" id="description" rows="3" placeholder="{{ 'CATEGORIES.ADD.DESCRIPTION' | translate }}"></textarea>
             </div>
         </form>
     </div>

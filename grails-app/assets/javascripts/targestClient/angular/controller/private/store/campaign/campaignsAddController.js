@@ -13,6 +13,15 @@
         self.today = new Date();
         self.period = {startDate: null, endDate: null};
 
+        self.options = {
+            height: 150,
+            toolbar: [
+                ['style', ['bold', 'italic', 'underline', 'clear']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['height', ['height']]
+            ]
+        };
+
         function save(){
             $scope.$broadcast('show-errors-check-validity');
             if ($scope.form.$valid) {

@@ -33,7 +33,6 @@
                     <thead>
                     <tr>
                         <th>{{ 'CAMPAIGN.LIST.NAME' | translate }}</th>
-                        <th>{{ 'CAMPAIGN.LIST.DESCRIPTION' | translate }}</th>
                         <th>{{ 'CAMPAIGN.LIST.START' | translate }}</th>
                         <th>{{ 'CAMPAIGN.LIST.END' | translate }}</th>
                         <th>{{ 'CAMPAIGN.LIST.STATUS' | translate }}</th>
@@ -44,9 +43,6 @@
                     <tr ng-repeat="campaign in CampaignsListCtrl.campaigns | filter: CampaignsListCtrl.search">
                         <td>
                             <span keywords="CampaignsListCtrl.search" highlight="campaign.name"></span>
-                        </td>
-                        <td>
-                            <span keywords="CampaignsListCtrl.search" highlight="campaign.description"></span>
                         </td>
                         <td>
                             <span>{{campaign.startDate | date}}</span>
@@ -75,7 +71,7 @@
         </div>
         <div class="alert alert-info" ng-if="CampaignsListCtrl.campaigns.length == 0">
             {{ 'CAMPAIGN.NO_CAMPAIGN' | translate }}
-            <a class="alert-link" ui-sref="company.campaigns.add">{{ 'CAMPAIGN.NO_CAMPAIGN_LINK' | translate }}</a>
+            <a class="alert-link" ui-sref="store.campaigns.add">{{ 'CAMPAIGN.NO_CAMPAIGN_LINK' | translate }}</a>
         </div>
     </div>
 </div>

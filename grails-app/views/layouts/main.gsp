@@ -5,6 +5,7 @@
 	<title>Targest</title>
 	<link rel="shortcut icon" href="${assetPath(src: 'favicon.png')}" type="image/x-icon">
 	<asset:javascript src="targestClient/application.js"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <asset:stylesheet src="application.css"/>

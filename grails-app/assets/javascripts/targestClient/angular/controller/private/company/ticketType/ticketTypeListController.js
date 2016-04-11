@@ -7,6 +7,7 @@
 
     function TicketTypeListController(TicketTypeListService) {
         var self = this;
+        self.statusClass = statusClass;
 
         self.search = '';
 
@@ -16,6 +17,15 @@
             });
         }
         load();
+
+        function statusClass(status){
+            if(status.name == 'ACTIVE'){
+                return "label-primary";
+            }
+            if(status.name == 'INACTIVE'){
+                return "label-danger";
+            }
+        }
     }
 
 })();

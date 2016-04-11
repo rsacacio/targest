@@ -1,22 +1,24 @@
-<div class="ibox-title">
-    <h3>{{ 'TICKET_TYPES.ADD.TITLE' | translate }}</h3>
-</div>
-<div class="ibox-content">
-    <form>
-        <div class="form-group">
-            <label for="name">{{ 'TICKET_TYPES.ADD.NAME' | translate }}</label>
-            <input type="text" class="form-control" id="name" placeholder="{{ 'TICKET_TYPES.ADD.NAME' | translate }}">
+<div class="animated fadeInRight">
+    <div class="ibox-title">
+        <h3>{{ 'TICKET_TYPES.ADD.TITLE' | translate }}</h3>
+    </div>
+    <div class="ibox-content">
+        <form>
+            <div class="form-group">
+                <label for="name">{{ 'TICKET_TYPES.ADD.NAME' | translate }}</label>
+                <input type="text" class="form-control" id="name" placeholder="{{ 'TICKET_TYPES.ADD.NAME' | translate }}">
+            </div>
+            <div class="form-group">
+                <label for="description">{{ 'TICKET_TYPES.ADD.DESCRIPTION' | translate }}</label>
+                <input type="textarea" class="form-control" id="description" placeholder="{{ 'TICKET_TYPES.ADD.DESCRIPTION' | translate }}">
+            </div>
+        </form>
+    </div>
+    <div class="ibox-footer">
+        <div class="pull-right">
+            <button class="btn btn-primary " type="button">
+                <i class="fa fa-check"></i>&nbsp;{{ 'TICKET_TYPES.ADD.SAVE' | translate }}
+            </button>
         </div>
-        <div class="form-group">
-            <label for="description">{{ 'TICKET_TYPES.ADD.DESCRIPTION' | translate }}</label>
-            <input type="textarea" class="form-control" id="description" placeholder="{{ 'TICKET_TYPES.ADD.DESCRIPTION' | translate }}">
-        </div>
-    </form>
-</div>
-<div class="ibox-footer">
-    <div class="pull-right">
-        <button class="btn btn-primary " type="button">
-            <i class="fa fa-check"></i>&nbsp;{{ 'TICKET_TYPES.ADD.SAVE' | translate }}
-        </button>
     </div>
 </div>

@@ -3,6 +3,7 @@ package br.com.catalisa.targest.converter
 import br.com.catalisa.targest.dto.store.StoreDto
 import br.com.catalisa.targest.encode.AES
 import br.com.catalisa.targest.store.Store
+import br.com.catalisa.targest.user.UserStore
 
 class ConvertStore {
 
@@ -22,6 +23,12 @@ class ConvertStore {
         dto.name = domain.name
         dto.status = domain.status
         dto.company = ConvertCompany.domainInDto(domain.company)
+        return dto
+    }
+
+    public static StoreDto domainInDtoWithUsers(Store domain){
+        StoreDto dto = ConvertStore.domainInDto(domain)
+        dto.users = ConvertUserStore.domainInDtoList(UserStore.findAllByStore(domain))
         return dto
     }
 

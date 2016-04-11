@@ -1,68 +1,70 @@
-<div class="ibox-title">
-    <h3>{{ 'CATEGORIES.LIST.TITLE' | translate }}</h3>
-</div>
-<div class="ibox-content">
-    <div ng-if="CategoriesListCtrl.categories.length > 0">
-        <div class="row">
-            <div class="col-sm-4">
-                <div class="input-group">
-                    <input type="text" placeholder="{{ 'CATEGORIES.LIST.SEARCH' | translate }}" ng-model="CategoriesListCtrl.search" class="input-sm form-control">
-                    <span class="input-group-btn">
-                        <button type="button" class="btn btn-sm btn-primary"> <i class="fa fa-search"></i></button>
-                    </span>
+<div class="animated fadeInRight">
+    <div class="ibox-title">
+        <h3>{{ 'CATEGORIES.LIST.TITLE' | translate }}</h3>
+    </div>
+    <div class="ibox-content">
+        <div ng-if="CategoriesListCtrl.categories.length > 0">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="input-group">
+                        <input type="text" placeholder="{{ 'CATEGORIES.LIST.SEARCH' | translate }}" ng-model="CategoriesListCtrl.search" class="input-sm form-control">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-sm btn-primary"> <i class="fa fa-search"></i></button>
+                        </span>
+                    </div>
                 </div>
-            </div>
-            <div class="col-sm-4 m-b-xs col-sm-offset-4">
-                <div class="pull-right">
-                    <div data-toggle="buttons" class="btn-group">
-                        <label class="btn btn-sm btn-white">
-                            <input type="radio" id="option1" name="options">
-                            {{ 'CATEGORIES.LIST.ACTIVE' | translate }}
-                        </label>
-                        <label class="btn btn-sm btn-white active">
-                            <input type="radio" id="option2" name="options">
-                            {{ 'CATEGORIES.LIST.INACTIVE' | translate }}
-                        </label>
+                <div class="col-sm-4 m-b-xs col-sm-offset-4">
+                    <div class="pull-right">
+                        <div data-toggle="buttons" class="btn-group">
+                            <label class="btn btn-sm btn-white">
+                                <input type="radio" id="option1" name="options">
+                                {{ 'CATEGORIES.LIST.ACTIVE' | translate }}
+                            </label>
+                            <label class="btn btn-sm btn-white active">
+                                <input type="radio" id="option2" name="options">
+                                {{ 'CATEGORIES.LIST.INACTIVE' | translate }}
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="table-responsive" ng-if="(CategoriesListCtrl.categories | filter: CategoriesListCtrl.search).length > 0">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>{{ 'CATEGORIES.LIST.NAME' | translate }}</th>
+                        <th>{{ 'CATEGORIES.LIST.DESCRIPTION' | translate }}</th>
+                        <th>{{ 'CATEGORIES.LIST.STATUS' | translate }}</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="category in CategoriesListCtrl.categories | filter: CategoriesListCtrl.search">
+                        <td>
+                            <span keywords="CategoriesListCtrl.search" highlight="category.name"></span>
+                        </td>
+                        <td>
+                            <span keywords="CategoriesListCtrl.search" highlight="category.description"></span>
+                        </td>
+                        <td>
+                            <span class="label" ng-class="CategoriesListCtrl.statusClass(category.status)">{{ 'CATEGORIES.LIST.' + category.status.name | translate }}</span>
+                        </td>
+                        <td>
+                            <a class="btn btn-white btn-xs pull-right" ng-click="CategoriesListCtrl.remove(category)">
+                                <i class="fa fa-trash"></i> {{ 'STORES.ADD.USER_LIST.REMOVE' | translate }}
+                            </a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="alert alert-warning" ng-if="(CategoriesListCtrl.categories | filter: CategoriesListCtrl.search).length == 0">
+                {{ 'CATEGORIES.NO_CATEGORIES_FOUND' | translate }}
+            </div>
         </div>
-        <div class="table-responsive" ng-if="(CategoriesListCtrl.categories | filter: CategoriesListCtrl.search).length > 0">
-            <table class="table table-striped">
-                <thead>
-                <tr>
-                    <th>{{ 'CATEGORIES.LIST.NAME' | translate }}</th>
-                    <th>{{ 'CATEGORIES.LIST.DESCRIPTION' | translate }}</th>
-                    <th>{{ 'CATEGORIES.LIST.STATUS' | translate }}</th>
-                    <th></th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr ng-repeat="category in CategoriesListCtrl.categories | filter: CategoriesListCtrl.search">
-                    <td>
-                        <span keywords="CategoriesListCtrl.search" highlight="category.name"></span>
-                    </td>
-                    <td>
-                        <span keywords="CategoriesListCtrl.search" highlight="category.description"></span>
-                    </td>
-                    <td>
-                        <a href="#"><i class="fa fa-check text-navy"></i></a>
-                    </td>
-                    <td>
-                        <a style="cursor: pointer" ng-click="CategoriesListCtrl.remove(category)">
-                            <i class="fa fa-times"></i>
-                        </a>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
+        <div class="alert alert-info" ng-if="CategoriesListCtrl.categories.length == 0">
+            {{ 'CATEGORIES.NO_CATEGORIES' | translate }}
+            <a class="alert-link" ui-sref="company.categories.add">{{ 'CATEGORIES.NO_CATEGORIES_LINK' | translate }}</a>
         </div>
-        <div class="alert alert-warning" ng-if="(CategoriesListCtrl.categories | filter: CategoriesListCtrl.search).length == 0">
-            {{ 'CATEGORIES.NO_CATEGORIES_FOUND' | translate }}
-        </div>
-    </div>
-    <div class="alert alert-info" ng-if="CategoriesListCtrl.categories.length == 0">
-        {{ 'CATEGORIES.NO_CATEGORIES' | translate }}
-        <a class="alert-link" ui-sref="company.categories.add">{{ 'CATEGORIES.NO_CATEGORIES_LINK' | translate }}</a>
     </div>
 </div>

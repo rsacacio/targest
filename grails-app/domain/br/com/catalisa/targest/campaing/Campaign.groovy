@@ -10,8 +10,8 @@ class Campaign {
     String name
     String description
     Date creation
-    Date start
-    Date end
+    Date startDate
+    Date endDate
     CampaignStatus status
     Store store
     TicketType ticketType
@@ -22,8 +22,8 @@ class Campaign {
         name nullable: false, maxSize: 255, minSize: 3
         description nullable: true
         creation nullable: false
-        start nullable: false
-        end nullable: false
+        startDate nullable: false
+        endDate nullable: false
         status nullable: false
         store nullable: false
         categories nullable: false

@@ -1,58 +1,64 @@
-<div class="ibox-title">
-    <h3>{{ 'STORES.ADD.TITLE' | translate }}</h3>
-</div>
-<div class="ibox-content">
-    <form name="form" novalidate>
-        <div class="form-group" show-errors>
-            <label for="name">{{ 'STORES.ADD.NAME' | translate }}</label>
-            <input type="text" ng-model="StoresAddCtrl.store.name" class="form-control" id="name" name="name" placeholder="{{ 'STORES.ADD.NAME' | translate }}" ng-required="true">
-            <p class="help-block" ng-if="form.name.$error.required">{{ 'MESSAGE.FIELD_REQUIRED' | translate }}</p>
+<div class="animated fadeInRight">
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <h3>{{ 'STORES.ADD.TITLE' | translate }}</h3>
         </div>
-        <div class="form-group">
-            <label for="description">{{ 'STORES.ADD.DESCRIPTION' | translate }}</label>
-            <textarea type="textarea" ng-model="StoresAddCtrl.store.description" rows="3" class="form-control" id="description" placeholder="{{ 'STORES.ADD.DESCRIPTION' | translate }}"></textarea>
-        </div>
-        <div class="hr-line-dashed"></div>
-        <h3 class="m-t-none m-b">
-            {{ 'STORES.ADD.USERS' | translate }}
-            <a ng-click="StoresAddCtrl.openUserAdd()" ng-if="StoresAddCtrl.store.users.length > 0"><i class="fa fa-plus"></i></a>
-        </h3>
-        <div class="alert alert-info" ng-if="StoresAddCtrl.store.users.length == 0">
-            {{ 'STORES.ADD.NO_USERS' | translate }}
-            <a class="alert-link" ng-click="StoresAddCtrl.openUserAdd()">{{ 'STORES.ADD.NO_USERS_LINK' | translate }}</a>
-        </div>
+        <div class="ibox-content">
+            <form name="form" novalidate>
+                <div class="form-group" show-errors>
+                    <label for="name">{{ 'STORES.ADD.NAME' | translate }}</label>
+                    <input type="text" ng-model="StoresAddCtrl.store.name" class="form-control" id="name" name="name" placeholder="{{ 'STORES.ADD.NAME' | translate }}" ng-required="true">
+                    <p class="help-block" ng-if="form.name.$error.required">{{ 'MESSAGE.FIELD_REQUIRED' | translate }}</p>
+                </div>
+                <div class="form-group">
+                    <label for="description">{{ 'STORES.ADD.DESCRIPTION' | translate }}</label>
+                    <textarea type="textarea" ng-model="StoresAddCtrl.store.description" rows="3" class="form-control" id="description" placeholder="{{ 'STORES.ADD.DESCRIPTION' | translate }}"></textarea>
+                </div>
+                <div class="hr-line-dashed"></div>
+                <h3 class="m-t-none m-b">
+                    {{ 'STORES.ADD.USERS' | translate }}
+                    <a ng-click="StoresAddCtrl.openUserAdd()" ng-if="StoresAddCtrl.store.users.length > 0"><i class="fa fa-plus"></i></a>
+                </h3>
+                <div class="alert alert-info" ng-if="StoresAddCtrl.store.users.length == 0">
+                    {{ 'STORES.ADD.NO_USERS' | translate }}
+                    <a class="alert-link" ng-click="StoresAddCtrl.openUserAdd()">{{ 'STORES.ADD.NO_USERS_LINK' | translate }}</a>
+                </div>
 
-        <div class="table-responsive" ng-if="StoresAddCtrl.store.users.length > 0">
-            <table class="table table-striped">
-                <thead>
-                <tr>
-                    <th>{{ 'STORES.ADD.USER_LIST.NAME' | translate }}</th>
-                    <th>{{ 'STORES.ADD.USER_LIST.EMAIL' | translate }}</th>
-                    <th>{{ 'STORES.ADD.USER_LIST.TYPE' | translate }}</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr ng-repeat="user in StoresAddCtrl.store.users">
-                    <td>
-                        {{user.name}}
-                    </td>
-                    <td>
-                        {{user.email}}
-                    </td>
-                    <td>
-                        {{user.type}}
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
+                <div class="table-responsive" ng-if="StoresAddCtrl.store.users.length > 0">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>{{ 'STORES.ADD.USER_LIST.EMAIL' | translate }}</th>
+                            <th>{{ 'STORES.ADD.USER_LIST.TYPE' | translate }}</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="user in StoresAddCtrl.store.users">
+                            <td>
+                                {{user.email}}
+                            </td>
+                            <td>
+                                {{ 'USER_TYPE.' + user.type.name | translate }}
+                            </td>
+                            <td>
+                                <a class="btn btn-white btn-xs pull-right" ng-click="StoresAddCtrl.removeUser(user)">
+                                    <i class="fa fa-trash"></i> {{ 'STORES.ADD.USER_LIST.REMOVE' | translate }}
+                                </a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
 
-    </form>
-</div>
-<div class="ibox-footer">
-    <div class="pull-right">
-        <button class="btn btn-primary " ng-click="StoresAddCtrl.save()" type="button">
-            <i class="fa fa-check"></i>&nbsp;{{ 'STORES.ADD.SAVE' | translate }}
-        </button>
+            </form>
+        </div>
+        <div class="ibox-footer">
+            <div class="pull-right">
+                <button class="btn btn-primary " ng-click="StoresAddCtrl.save()" type="button">
+                    <i class="fa fa-check"></i>&nbsp;{{ 'STORES.ADD.SAVE' | translate }}
+                </button>
+            </div>
+        </div>
     </div>
 </div>

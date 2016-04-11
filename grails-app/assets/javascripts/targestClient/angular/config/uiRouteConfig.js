@@ -244,8 +244,8 @@
                     url: '/config',
                     views: {
                         'viewCompany': {
-                            templateUrl: 'assets/targestClient/partials/private/config/config.html',
-                            controller : 'ConfigController as ConfigCtrl'
+                            templateUrl: 'assets/targestClient/partials/private/company/config/configCompany.html',
+                            controller : 'ConfigCompanyController as ConfigCompanyCtrl'
                         }
                     }
                 })
@@ -255,7 +255,7 @@
                     url: '/profile',
                     views: {
                         'viewConfig': {
-                            templateUrl: 'assets/targestClient/partials/private/config/profile/profileEdit.html',
+                            templateUrl: 'assets/targestClient/partials/private/profile/profileEdit.html',
                             controller : 'ProfileEditController as ProfileEditCtrl'
                         }
                     }
@@ -288,8 +288,8 @@
                     url: '/campaigns',
                     views: {
                         'viewStore': {
-                            templateUrl: 'assets/targestClient/partials/private/store/campaign/campaign.html',
-                            controller : 'CampaignController as CampaignCtrl'
+                            templateUrl: 'assets/targestClient/partials/private/store/campaign/campaigns.html',
+                            controller : 'CampaignsController as CampaignsCtrl'
                         }
                     }
                 })
@@ -299,8 +299,8 @@
                     url: '/list',
                     views: {
                         'viewCampaigns': {
-                            templateUrl: 'assets/targestClient/partials/private/store/campaign/campaignList.html',
-                            controller : 'CategoriesListController as CategoriesListCtrl'
+                            templateUrl: 'assets/targestClient/partials/private/store/campaign/campaignsList.html',
+                            controller : 'CampaignsListController as CampaignsListCtrl'
                         }
                     }
                 })
@@ -310,8 +310,8 @@
                     url: '/add',
                     views: {
                         'viewCampaigns': {
-                            templateUrl: 'assets/targestClient/partials/private/store/campaign/campaignAdd.html',
-                            controller : 'CategoriesAddController as CategoriesAddCtrl'
+                            templateUrl: 'assets/targestClient/partials/private/store/campaign/campaignsAdd.html',
+                            controller : 'CampaignsAddController as CampaignsAddCtrl'
                         }
                     }
                 })
@@ -321,8 +321,30 @@
                     url: '/edit/:campaignId',
                     views: {
                         'viewCampaigns': {
-                            templateUrl: 'assets/targestClient/partials/private/store/campaign/campaignEdit.html',
-                            controller : 'CategoriesEditController as CategoriesEditCtrl'
+                            templateUrl: 'assets/targestClient/partials/private/store/campaign/campaignsEdit.html',
+                            controller : 'CampaignsEditController as CampaignsEditCtrl'
+                        }
+                    }
+                })
+            .state(
+                'store.tickets',
+                {
+                    url: '/tickets',
+                    views: {
+                        'viewStore': {
+                            templateUrl: 'assets/targestClient/partials/private/store/ticket/tickets.html',
+                            controller : 'TicketsController as TicketsCtrl'
+                        }
+                    }
+                })
+            .state(
+                'store.tickets.detail',
+                {
+                    url: '/tickets/detail',
+                    views: {
+                        'viewTickets': {
+                            templateUrl: 'assets/targestClient/partials/private/store/ticket/ticketsDetail.html',
+                            controller : 'TicketsDetailController as TicketsDetailCtrl'
                         }
                     }
                 })

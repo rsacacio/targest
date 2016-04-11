@@ -1,0 +1,55 @@
+<div class="animated fadeInRight">
+    <div class="ibox-title">
+        <h3>{{ 'PROFILE.TITLE' | translate }}</h3>
+    </div>
+    <div class="ibox-content">
+        <form name="form" novalidate>
+            <div class="form-group" show-erros>
+                <label for="name">{{ 'PROFILE.NAME' | translate }}</label>
+                <input type="text" class="form-control" ng-model="ProfileEditCtrl.user.name" id="name" name="name" placeholder="{{ 'PROFILE.NAME' | translate }}" ng-required="true">
+                <p class="help-block" ng-if="form.name.$error.required">{{ 'MESSAGE.FIELD_REQUIRED' | translate }}</p>
+            </div>
+            <div class="form-group" show-errors>
+                <label for="email">{{ 'PROFILE.EMAIL' | translate }}</label>
+                <input type="email" class="form-control" id="email" name="email" ng-model="ProfileEditCtrl.user.email" placeholder="{{ 'PROFILE.EMAIL' | translate }}" ng-required="true">
+                <p class="help-block" ng-if="form.email.$error.required">{{ 'MESSAGE.FIELD_REQUIRED' | translate }}</p>
+            </div>
+            <div>
+                <h5>
+                    <a ng-click="ProfileEditCtrl.showChangePassword = !ProfileEditCtrl.showChangePassword">
+                        <i ng-if="!ProfileEditCtrl.showChangePassword" class="fa fa-caret-down"></i>
+                        <i ng-if="ProfileEditCtrl.showChangePassword" class="fa fa-caret-up"></i>
+                        {{ 'PROFILE.CHANGE_PASSWORD' | translate }}
+                    </a>
+                </h5>
+                <div ng-if="ProfileEditCtrl.showChangePassword" class="animated fadeInDown">
+                    <div class="row">
+                        <div class="form-group col-md-4" show-errors>
+                            <label for="oldPassword">{{ 'PROFILE.OLD_PASSWORD' | translate }}</label>
+                            <input type="password" class="form-control" ng-model="ProfileEditCtrl.user.oldPassword" id="oldPassword" name="oldPassword" placeholder="{{ 'PROFILE.OLD_PASSWORD' | translate }}" ng-required="ProfileEditCtrl.showChangePassword">
+                            <p class="help-block" ng-if="form.oldPassword.$error.required">{{ 'MESSAGE.FIELD_REQUIRED' | translate }}</p>
+                        </div>
+                        <div class="form-group col-md-4" show-errors>
+                            <label for="newPassword">{{ 'PROFILE.NEW_PASSWORD' | translate }}</label>
+                            <input type="password" class="form-control" ng-model="ProfileEditCtrl.user.newPassword" id="newPassword" name="newPassword" placeholder="{{ 'PROFILE.NEW_PASSWORD' | translate }}" ng-required="ProfileEditCtrl.showChangePassword">
+                            <p class="help-block" ng-if="form.newPassword.$error.required">{{ 'MESSAGE.FIELD_REQUIRED' | translate }}</p>
+                        </div>
+                        <div class="form-group col-md-4" show-errors>
+                            <label for="name">{{ 'PROFILE.CONFIRM_NEW_PASSWORD' | translate }}</label>
+                            <input type="password" class="form-control" ng-model="ProfileEditCtrl.user.confirmNewPassword" id="confirmNewPassword" name="confirmNewPassword" placeholder="{{ 'PROFILE.CONFIRM_NEW_PASSWORD' | translate }}" ng-required="ProfileEditCtrl.showChangePassword">
+                            <p class="help-block" ng-if="form.confirmNewPassword.$error.required">{{ 'MESSAGE.FIELD_REQUIRED' | translate }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <div class="ibox-footer">
+        <div class="pull-right">
+            <button class="btn btn-primary " type="button" ng-click="ProfileEditCtrl.save()">
+                <i class="fa fa-check"></i>&nbsp;{{ 'PROFILE.SAVE' | translate }}
+            </button>
+        </div>
+    </div>
+</div>

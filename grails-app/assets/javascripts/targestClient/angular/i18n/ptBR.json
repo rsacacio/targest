@@ -7,7 +7,8 @@
     "TICKET_TYPES": "Tipos de promoções",
     "CAMPAIGNS": "Campanhas",
     "TICKETS": "Cupons",
-    "TICKET_USE": "Consumo",
+    "TICKET_USE": "Usar cupom",
+    "TYPE_TICKET_CODE": "Digite o cupom",
     "ENTER_FULLSCREEN": "Fullscreen",
     "EXIT_FULLSCREEN": "Normal",
     "EXIT": "Sair",
@@ -22,7 +23,62 @@
     "YES_I_SURE": "Sim eu tenho!",
     "NO_THANKS": "Não, obrigado!",
     "DELETED": "Removido!",
-    "DELETED_WITH_SUCCESS": "Item excluído com sucesso."
+    "DELETED_WITH_SUCCESS": "Item excluído com sucesso.",
+    "SUCCESS": "Operação realizada com sucesso.",
+    "ERROR": "Erro ao realizar operação."
+  },
+  "CALENDAR":
+  {
+    "MONTHS":
+    {
+      "JANUARY": "Janeiro",
+      "FEBRUARY": "Fevereiro",
+      "MARCH": "Março",
+      "APRIL": "Abril",
+      "MAY": "Maio",
+      "JUNE": "Junho",
+      "JULY": "Julho",
+      "AUGUST": "Agosto",
+      "SEPTEMBER": "Setembro",
+      "OCTOBER": "Outubro",
+      "NOVEMBER": "Novembro",
+      "DECEMBER": "Dezembro"
+    },
+
+    "RANGE":
+    {
+      "TODAY": "Hoje",
+      "LAST_7_DAYS": "Últimos 7 dias",
+      "LAST_30_DAYS": "Últimos 30 dias",
+      "THIS_MONTH": "Este mês",
+      "LAST_MONTH": "Último mês"
+    },
+
+    "DAYS_OF_WEEK":
+    {
+      "A_SUNDAY": "D",
+      "A_MONDAY": "S",
+      "A_TUESDAY": "T",
+      "A_WEDNESDAY": "Q",
+      "A_THURSDAY": "Q",
+      "A_FRIDAY": "S",
+      "A_SATURDAY": "S"
+    },
+
+    "APPLY": "Aplicar",
+    "CLOSE": "Fechar",
+    "FROM": "A partir de",
+    "UNTIL": "Até",
+    "PERSONALITY_SEARCH": "Busca personalizada",
+    "PERIOD_SELECTED_INVALID": "Período selecionado inválido",
+    "PERIOD_TYPED_INVALID": "Período digitado inválido",
+    "FORMAT_RANGE": "DD/MM/YYYY",
+    "FORMAT": "dd/MM/yyyy",
+    "FORMAT_TIME": "dd/MM/yyyy HH:mm:ss"
+  },
+  "USER_TYPE": {
+    "ADMINISTRATOR": "Administrador",
+    "SELLER": "Vendedor"
   },
   "DASHBOARD": {
     "TITLE": "Dashboard"
@@ -46,7 +102,8 @@
       "SEARCH": "Procurar",
       "NAME": "Nome",
       "DESCRIPTION": "Descrição",
-      "STATUS": "Status"
+      "STATUS": "Status",
+      "REMOVE": "Remover"
     },
     "EDIT": {
       "TITLE": "Editar",
@@ -78,6 +135,7 @@
       "STATUS": "Status",
       "ACTIVE": "Ativo",
       "INACTIVE": "Inativo",
+      "VIEW": "Visualizar",
       "SEARCH": "Procurar"
     },
     "EDIT": {
@@ -92,17 +150,34 @@
       "NO_USERS": "Nenhum usuário adicionado.",
       "NO_USERS_LINK": "Clique aqui para adicionar.",
       "USER_LIST": {
-        "NAME": "Nome",
         "EMAIL": "E-mail",
-        "TYPE": "Tipo de usuário"
+        "TYPE": "Tipo de usuário",
+        "REMOVE": "Remover"
       },
       "ADD_USER": {
         "TITLE": "Adiacionar usuário",
-        "NAME": "Nome",
         "EMAIL": "E-mail",
         "TYPE": "Tipo de usuário",
         "SAVE": "Salvar",
         "CLOSE": "Fechar"
+      }
+    },
+    "VIEW": {
+      "TITLE": "Visualizar",
+      "CREATE_ON": "Criado em",
+      "STATUS": "Status",
+      "ACTIVE": "Ativo",
+      "INACTIVE": "Inativo",
+      "TOTAL_BILLED_CAMPAIGN": "Total faturado com campanhas (em R$)",
+      "USER_LIST": {
+        "TITLE": "Usuários",
+        "NAME": "Nome",
+        "EMAIL": "E-mail",
+        "TYPE": "Tipo de usuário",
+        "REMOVE": "Remover"
+      },
+      "CAMPAIGN_LIST": {
+        "TITLE": "Campanhas"
       }
     }
   },
@@ -122,7 +197,8 @@
       "STATUS": "Status",
       "ACTIVE": "Ativo",
       "INACTIVE": "Inativo",
-      "SEARCH": "Procurar"
+      "SEARCH": "Procurar",
+      "REMOVE": "Remover"
     },
     "EDIT": {
       "TITLE": "Editar"
@@ -134,19 +210,23 @@
       "SAVE": "Salvar"
     }
   },
-  "CONFIG": {
+  "CONFIG_COMPANY": {
     "TITLE": "Configurações",
     "MENU": {
       "PROFILE": "Perfil",
       "PREFERENCES": "Preferências",
       "USERS": "Usuários"
-    },
-    "PROFILE": {
-      "TITLE": "Perfil",
-      "NAME": "Nome",
-      "EMAIL": "E-mail",
-      "SAVE": "Salvar"
     }
+  },
+  "PROFILE": {
+    "TITLE": "Perfil",
+    "NAME": "Nome",
+    "EMAIL": "E-mail",
+    "CHANGE_PASSWORD": "Alterar senha",
+    "OLD_PASSWORD": "Senha anterior",
+    "NEW_PASSWORD": "Nova senha",
+    "CONFIRM_NEW_PASSWORD": "Confirme a nova senha",
+    "SAVE": "Salvar"
   },
   "CAMPAIGN": {
     "TITLE": "Campanhas",
@@ -161,10 +241,14 @@
       "TITLE": "Listar",
       "NAME": "Nome",
       "DESCRIPTION": "Descrição",
+      "END": "Fim",
+      "START": "Início",
       "STATUS": "Status",
       "ACTIVE": "Ativo",
       "INACTIVE": "Inativo",
-      "SEARCH": "Procurar"
+      "SEARCH": "Procurar",
+      "REMOVE": "Remover",
+      "VIEW": "Visualizar"
     },
     "EDIT": {
       "TITLE": "Editar"
@@ -173,11 +257,29 @@
       "TITLE": "Adicionar",
       "NAME": "Nome",
       "DESCRIPTION": "Descrição",
-      "START": "Início",
-      "END": "Fim",
+      "PERIOD": "Período",
       "CATEGORY": "Categorias",
       "TICKET_TYPE": "Tipo de promoção",
       "SAVE": "Salvar"
     }
+  },
+  "TICKET":{
+    "TITLE": "Cupons",
+    "DETAIL": {
+      "TITLE": "Detalhes",
+      "AMOUNT": "Total consumido com o cupom",
+      "USE_TICKET": "Usar cupom"
+    },
+    "HISTORY":{
+      "TITLE": "Histórico"
+    },
+    "LIST": {
+      "CAMPAIGN": "Campanha",
+      "CREATION": "Data de criação",
+      "STATUS": "Status",
+      "AMOUNT": "Total consumido",
+      "VIEW": "Visualizar"
+    }
+
   }
 }

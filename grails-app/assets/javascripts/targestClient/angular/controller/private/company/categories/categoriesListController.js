@@ -8,6 +8,7 @@
     function CategoriesListController(CategoriesListService, $filter, SweetAlert) {
         var self = this;
         self.remove = remove;
+        self.statusClass = statusClass;
 
         self.search = '';
 
@@ -18,6 +19,15 @@
             });
         }
         load();
+
+        function statusClass(status){
+            if(status.name == 'ACTIVE'){
+                return "label-primary";
+            }
+            if(status.name == 'INACTIVE'){
+                return "label-danger";
+            }
+        }
 
         function remove(category){
             SweetAlert.swal({

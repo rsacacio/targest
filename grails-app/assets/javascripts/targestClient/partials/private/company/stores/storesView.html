@@ -1,0 +1,170 @@
+<div class="animated fadeInRight">
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <h3>{{ 'STORES.VIEW.TITLE' | translate }}</h3>
+        </div>
+        <div class="ibox-content">
+            <div class="m-b-md">
+                <a ng-click="StoresViewCtrl.lock()" ng-if="StoresViewCtrl.store.status.name == 'ACTIVE'" class="btn btn-white btn-sm pull-right">
+                    <i class="fa fa-lock"></i>
+                    Desativar Loja
+                </a>
+                <a ng-click="StoresViewCtrl.unlock()" ng-if="StoresViewCtrl.store.status.name == 'INACTIVE'"  class="btn btn-white btn-sm pull-right">
+                    <i class="fa fa-unlock"></i>
+                    Ativar Loja
+                </a>
+                <h1>
+                    {{StoresViewCtrl.store.name}}
+                </h1>
+                <p>
+                    {{StoresViewCtrl.store.description}}
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                <span>
+                    <strong>
+                        {{ 'STORES.VIEW.CREATE_ON' | translate }}
+                    </strong>
+                </span>
+                    <p class="store-details">
+                        {{ StoresViewCtrl.store.creation | date }}
+                    </p>
+                </div>
+                <div class="col-md-4">
+                <span>
+                    <strong>
+                        {{ 'STORES.VIEW.STATUS' | translate }}
+                    </strong>
+                </span>
+                    <p>
+                        <span class="label" ng-class="StoresViewCtrl.statusClass()">{{ 'STORES.VIEW.' + StoresViewCtrl.store.status.name | translate }}</span>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                <span>
+                    <strong>
+                        {{ 'STORES.VIEW.TOTAL_BILLED_CAMPAIGN' | translate }}
+                    </strong>
+                </span>
+                    <p class="store-details">
+                        23.891,01
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <h3>{{ 'STORES.VIEW.USER_LIST.TITLE' | translate }}</h3>
+        </div>
+        <div class="ibox-content">
+            <div class="table-responsive" ng-if="StoresViewCtrl.store.users.length > 0">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>{{ 'STORES.VIEW.USER_LIST.NAME' | translate }}</th>
+                        <th>{{ 'STORES.VIEW.USER_LIST.EMAIL' | translate }}</th>
+                        <th>{{ 'STORES.VIEW.USER_LIST.TYPE' | translate }}</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="userStore in StoresViewCtrl.store.users">
+                        <td>
+                            {{userStore.user.name}}
+                        </td>
+                        <td>
+                            {{userStore.user.email}}
+                        </td>
+                        <td>
+                            {{ 'USER_TYPE.' + userStore.type.name | translate }}
+                        </td>
+                        <td>
+                            <a class="btn btn-white btn-xs pull-right" ng-click="StoresViewCtrl.removeUser(userStore)">
+                                <i class="fa fa-trash"></i> {{ 'STORES.VIEW.USER_LIST.REMOVE' | translate }}
+                            </a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div><div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <h3>{{ 'STORES.VIEW.CAMPAIGN_LIST.TITLE' | translate }}</h3>
+        </div>
+        <div class="ibox-content">
+            <table class="table table-striped" data-page-size="15">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Inicio</th>
+                        <th>Fim</th>
+                        <th>Status</th>
+                        <th>Total de cupons</th>
+                        <th>Total faturado (em R$)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="footable-even" style="display: table-row;">
+                        <td>
+                            Campanha de natal
+                        </td>
+                        <td>
+                            10/10/2016
+                        </td>
+                        <td>
+                            10/01/2017
+                        </td>
+                        <td class="footable-visible">
+                            <span class="label label-primary">Ativo</span>
+                        </td>
+                        <td>
+                            265
+                        </td>
+                        <td>
+                            15.052,54
+                        </td>
+                        <td class="text-right footable-visible footable-last-column">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">
+                                    <i class="fa fa-eye"></i>
+                                    Visualizar
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="footable-even" style="display: table-row;">
+                        <td>
+                            Campanha de dias das crianças
+                        </td>
+                        <td>
+                            25/09/2016
+                        </td>
+                        <td>
+                            25/10/2016
+                        </td>
+                        <td class="footable-visible">
+                            <span class="label label-danger">Finalizada</span>
+                        </td>
+                        <td>
+                            408
+                        </td>
+                        <td>
+                            20.172,00
+                        </td>
+                        <td class="text-right footable-visible footable-last-column">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">
+                                    <i class="fa fa-eye"></i>
+                                    Visualizar
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

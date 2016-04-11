@@ -1,0 +1,31 @@
+<div class="page-header">
+    <h1>{{ 'CAMPAIGN.TITLE' | translate }}</h1>
+</div>
+<div class="tabs-container animated fadeInRight">
+    <div class="row">
+        <div class="col-md-2">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="nav nav-pills nav-stacked nav-pills-stacked-example">
+                        <li role="presentation" ng-class="CampaignsCtrl.isActive('list')">
+                            <a ui-sref="store.campaigns.list">{{ 'CAMPAIGN.MENU.LIST' | translate }}</a>
+                        </li>
+                        <li ng-class="CampaignsCtrl.isActive('add')">
+                            <a ui-sref="store.campaigns.add">
+                                <i class="fa fa-plus"></i>
+                                {{ 'CAMPAIGN.MENU.ADD' | translate }}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-10">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox float-e-margins" ui-view="viewCampaigns"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

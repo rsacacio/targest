@@ -26,7 +26,7 @@ class StoreAddService {
             if(!userToCreate){
                 userToCreate = new TargestUser()
                 userToCreate.email = userCommand.email
-                userToCreate.name = userCommand.name
+                userToCreate.name = userCommand.email
                 userToCreate.status = UserStatus.PENDING
                 userToCreate.creation = new Date()
 
@@ -38,7 +38,7 @@ class StoreAddService {
 
             UserStore userStore = new UserStore()
             userStore.user = userToCreate
-            userStore.type = UserStoreType.getById(userCommand.type)
+            userStore.type = UserStoreType.getById(userCommand.typeId)
             userStore.store = store
             userStore.status = UserStoreStatus.ACTIVE
             userStore.save(flush: true, failOnError: true)
@@ -55,5 +55,4 @@ class StoreAddService {
     public List<UserStoreType> loadTypes(TargestUser user, Company company){
         return UserStoreType.values()
     }
-
 }

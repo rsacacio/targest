@@ -59,7 +59,7 @@ grails.project.dependency.resolution = {
 
     dependencies {
 //        compile "com.github.mifmif:generex:0.0.4"
-        runtime 'org.postgresql:postgresql:9.4.1207'
+         runtime 'org.postgresql:postgresql:9.4.1207'
         runtime "org.freemarker:freemarker:2.3.23"
     }
 

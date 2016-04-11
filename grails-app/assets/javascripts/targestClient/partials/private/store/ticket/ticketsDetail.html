@@ -1,0 +1,120 @@
+<div class="animated fadeInRight">
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <h3>{{ 'TICKET.DETAIL.TITLE' | translate }}</h3>
+        </div>
+        <div class="ibox-content">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="product-imitation">
+                        #14546156
+                    </div>
+                    <div class="text-center">
+                        <h2 class="text-navy">
+                            <i class="fa fa-check"></i> Ativo
+                        </h2>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <h2 class="font-bold m-b-xs">
+                        Rangel Acácio de Souza
+                    </h2>
+                    <small>
+                        <i class="fa fa-at"></i> rs.acacio@gmail.com |
+                        <i class="fa fa-phone"></i> (48) 8831-1107 |
+                        <i class="fa fa-birthday-cake"></i> 16/05/1990
+                    </small>
+                    <div class="m-t-md">
+                        <h4>Categorias</h4>
+                        <span class="label label-info">Esportes</span>
+                        <span class="label label-info">Moda Masculina</span>
+                        <span class="label label-info">Calçados</span>
+                        <span class="label label-info">Informática</span>
+                    </div>
+                    <hr>
+
+                    <h4>Campanha de Natal</h4>
+                    <div class="small text-muted">
+                        Cupom de 20% de desconto em qualquer calçado da Nike.
+                        <br/>
+                        <br/>
+                        Todo cliente que gerar o cupom e apresentar no caixa, terá o direito a 20% de desconto na compra de qualquer calçado da marca Nike.
+                    </div>
+                    <div class="row" style="margin-top: 15px;">
+                        <div class="col-md-4">
+                            <h4>Inicio</h4>
+                            <div class="small text-muted">
+                                10/03/2016
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <h4>Fim</h4>
+                            <div class="small text-muted">
+                                10/04/2016
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <h4>Status</h4>
+                            <span class="label label-info">Em vigência</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div>
+                        <div class="form-group">
+                            <label class="control-label" for="name">{{ 'TICKET.DETAIL.AMOUNT' | translate }}</label>
+                            <input type="text" ng-model="TicketsDetailCtrl.ticket.amount" class="form-control" id="name" name="name" placeholder="{{ 'TICKET.DETAIL.AMOUNT' | translate }}" ng-required="true">
+                            <p class="help-block" ng-if="form.name.$error.required">{{ 'MESSAGE.FIELD_REQUIRED' | translate }}</p>
+                        </div>
+                        <button class="btn btn-primary btn-sm pull-right"><i class="fa fa-cart-plus"></i> {{ 'TICKET.DETAIL.USE_TICKET' | translate }}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <h3>{{ 'TICKET.HISTORY.TITLE' | translate }}</h3>
+        </div>
+        <div class="ibox-content">
+            <div class="table-responsive" ng-if="(TicketsDetailCtrl.tickets | filter: TicketsDetailCtrl.search).length > 0">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>{{ 'TICKET.LIST.CAMPAIGN' | translate }}</th>
+                        <th>{{ 'TICKET.LIST.CREATION' | translate }}</th>
+                        <th>{{ 'TICKET.LIST.AMOUNT' | translate }}</th>
+                        <th>{{ 'TICKET.LIST.STATUS' | translate }}</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="ticket in TicketsDetailCtrl.tickets">
+                        <td class="ticket-title">
+                            <a>{{ticket.campaign.name}}</a>
+                            <br/>
+                            <small>
+                                <span>{{ticket.campaign.end | date}}</span><br/>
+                                <span class="label label-primary">Ativo</span>
+                            </small>
+                        </td>
+                        <td>
+                            <span>{{ticket.creation | date}}</span>
+                        </td>
+                        <td>
+                            <h4>R${{ticket.amount | date}}</h4>
+                        </td>
+                        <td>
+                            <span class="label label-primary">Ativo</span>
+                        </td>
+                        <td>
+                            <a href="#" class="btn btn-white btn-xs pull-right">
+                                <i class="fa fa-eye"></i> {{ 'TICKET.LIST.VIEW' | translate }}
+                            </a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

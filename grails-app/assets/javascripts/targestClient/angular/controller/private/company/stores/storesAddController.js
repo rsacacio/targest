@@ -9,6 +9,7 @@
         var self = this;
         self.openUserAdd = openUserAdd;
         self.save = save;
+        self.removeUser = removeUser;
 
         self.store = {};
         self.store.users = [];
@@ -21,7 +22,9 @@
                 modal.element.modal();
                 modal.close.then(function(result) {
                     if(result){
-                        self.store.users.push(result);
+                        var user = angular.copy(result);
+                        user.typeId = result.type.id;
+                        self.store.users.push(user);
                     }
                 });
             });
@@ -36,6 +39,10 @@
                     }
                 });
             }
+        }
+
+        function removeUser(user){
+            self.store.users.splice(self.store.users.indexOf(user), 1);
         }
 
     }
